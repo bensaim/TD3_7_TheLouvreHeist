@@ -8,4 +8,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="GameOver.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="GameOver.png" />
+  </ItemGroup>
+
 </Project>
