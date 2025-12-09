@@ -19,6 +19,10 @@ namespace LouvreHeist
         public MainWindow()
         {
             InitializeComponent();
+            UCPerd uc = new UCPerd();
+
+            // associe l'écran au conteneur
+            ZoneJeu.Content = uc;
         }
     }
 }
