@@ -10,10 +10,11 @@
 
   <ItemGroup>
     <None Remove="GameOver.png" />
+    <None Remove="images\GameOver.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="GameOver.png" />
+    <Resource Include="images\GameOver.png" />
   </ItemGroup>
 
 </Project>
