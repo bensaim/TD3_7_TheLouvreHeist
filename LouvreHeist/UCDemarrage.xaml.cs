@@ -24,6 +24,5 @@ namespace LouvreHeist
         {
             InitializeComponent();
         }
-s
     }
 }

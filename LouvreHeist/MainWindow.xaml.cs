@@ -20,9 +20,15 @@ namespace LouvreHeist
         {
             InitializeComponent();
             UCDemarrage uc = new UCDemarrage();
-
-            // associe l'écran au conteneur
             ZoneJeu.Content = uc;
+            uc.butStart.Click += AfficherTenue;
+        }
+
+        private void AfficherTenue(object sender, RoutedEventArgs e)
+        {
+            UCTenue uc = new UCTenue();
+            ZoneJeu.Content = uc;
+
         }
     }
 }
