@@ -10,11 +10,33 @@
 
   <ItemGroup>
     <None Remove="GameOver.png" />
+    <None Remove="images\demarrage.png" />
+    <None Remove="images\eggman diamond1.png" />
+    <None Remove="images\eggman thinkinb.png" />
+    <None Remove="images\eggman thinking.webp" />
+    <None Remove="images\eggman.webp" />
+    <None Remove="images\egmman diamond 2%24.png" />
+    <None Remove="images\egmman diamond 3.png" />
+    <None Remove="images\egmman t pose.png" />
     <None Remove="images\GameOver.png" />
+    <None Remove="images\louvredehors.jpg" />
+    <None Remove="images\pokemon.webp" />
+    <None Remove="images\start menu.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="images\demarrage.png" />
+    <Resource Include="images\eggman diamond1.png" />
+    <Resource Include="images\eggman thinkinb.png" />
+    <Resource Include="images\eggman thinking.webp" />
+    <Resource Include="images\eggman.webp" />
+    <Resource Include="images\egmman diamond 2$.png" />
+    <Resource Include="images\egmman diamond 3.png" />
+    <Resource Include="images\egmman t pose.png" />
     <Resource Include="images\GameOver.png" />
+    <Resource Include="images\louvredehors.jpg" />
+    <Resource Include="images\pokemon.webp" />
+    <Resource Include="images\start menu.png" />
   </ItemGroup>
 
 </Project>

@@ -7,9 +7,12 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Canvas>
-        <Label x:Name="Titre" Content="THE LOUVRE HEIST" Margin="163,78,163,291"  Background="#FFF3F3F3" Width="474" FontSize="48" FontWeight="Bold" />
-        <Label x:Name="Description" Content="Sauras-tu voler le diamant de la couronne sans te faire prendre ? " HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="Black" Background="#FFF19F59" FontSize="14" FontWeight="Bold" Canvas.Left="181" Canvas.Top="196"/>
+
         <Button x:Name="play" Content="PLAY" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" Width="296" Background="#FFC58A21" FontWeight="Bold" Foreground="Black" Canvas.Left="252" Canvas.Top="315"/>
+        <Image Height="450" Source="/images/demarrage.png" Stretch="Fill" Width="800"/>
+        <Button Canvas.Left="225" Canvas.Top="290">
+            <Image Height="86" Source="/images/start menu.png" Stretch="Fill" Width="340"/>
+        </Button>
 
     </Canvas>
 </UserControl>
