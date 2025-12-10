@@ -24,6 +24,10 @@ namespace LouvreHeist
         {
             InitializeComponent();
         }
-s
+
+        private void butStart_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
