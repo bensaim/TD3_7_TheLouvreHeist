@@ -16,14 +16,13 @@ using System.Windows.Shapes;
 namespace LouvreHeist
 {
     /// <summary>
-    /// Logique d'interaction pour UCPerd.xaml
+    /// Logique d'interaction pour UCAction4.xaml
     /// </summary>
-    public partial class UCPerd : UserControl
+    public partial class UCAction4 : UserControl
     {
-        public UCPerd()
+        public UCAction4()
         {
             InitializeComponent();
         }
-
     }
 }
