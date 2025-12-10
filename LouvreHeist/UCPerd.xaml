@@ -11,8 +11,5 @@
         <Image x:Name="imgGameOver" Height="450" Source="/images/GameOver.png" Stretch="Fill" Width="800" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <Button x:Name="butRejouer" Content="Rejouer" HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" Width="90" Canvas.Left="274" Canvas.Top="379"/>
         <Button x:Name="butQuitter" Content="Quitter" HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" Width="102" Canvas.Left="434" Canvas.Top="379"/>
-
-
-
     </Canvas>
 </UserControl>
