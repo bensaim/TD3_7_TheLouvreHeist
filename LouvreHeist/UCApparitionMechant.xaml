@@ -21,8 +21,9 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <Label x:Name="labDialogue1" Content="Tu arrives trop tard, le diamant est à moi !" HorizontalAlignment="Center" Margin="0,369,0,0" VerticalAlignment="Top" FontSize="30" FontFamily="Impact"/>
-        
+        <Label x:Name="labRepliqueOeufHomme1" Content="Tu arrives trop tard, le diamant est à moi !" HorizontalAlignment="Center" Margin="0,369,0,0" VerticalAlignment="Top" FontSize="30" FontFamily="Impact"/>
+        <Label x:Name="labOeufHomme1" Content="OeufHomme" HorizontalAlignment="Left" Margin="42,356,0,0" VerticalAlignment="Top" Height="36" Width="114" FontSize="14" FontWeight="Bold"/>
+
 
 
     </Grid>

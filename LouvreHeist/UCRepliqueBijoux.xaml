@@ -22,7 +22,8 @@
             </Rectangle.RenderTransform>
         </Rectangle>
         <Label x:Name="labDialogue2" Content="Rendez les bijoux de la couronne !" HorizontalAlignment="Center" Margin="0,367,0,0" VerticalAlignment="Top" FontSize="30" FontFamily="Comic Sans MS"/>
-        
+        <Label x:Name="labOeufHomme1" Content="OeufHomme" HorizontalAlignment="Left" Margin="42,356,0,0" VerticalAlignment="Top" Height="36" Width="114" FontSize="14" FontWeight="Bold"/>
+
 
     </Grid>
 </UserControl>
