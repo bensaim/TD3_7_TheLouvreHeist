@@ -8,10 +8,10 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Canvas>
         <RadioButton x:Name="tenue1" Canvas.Left="540" Canvas.Top="140" >
-            <Image Height="100" Source="/images/tutu.jpg"  Width="107"/>
+            <Image Height="100" Source="/images/tutu.jpg"  Width="100"/>
         </RadioButton>
         <RadioButton x:Name="tenue2" Canvas.Left="170" Canvas.Top="140">
-            <Image Height="100" Source="/images/tenueworker.jpg" Width="107"/>
+            <Image Height="100" Source="/images/tenueworker.jpg" Width="100"/>
         </RadioButton>
         <RadioButton x:Name="tenue3" Content="RadioButton" Canvas.Left="170" Canvas.Top="350"/>
         <RadioButton x:Name="tenue4" Content="RadioButton" Canvas.Left="540" Canvas.Top="350"/>
