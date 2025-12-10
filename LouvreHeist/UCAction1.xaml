@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="LouvreHeist.UCDebutRue"
+﻿<UserControl x:Class="LouvreHeist.UCAction1"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -20,10 +20,9 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        
-        <Label x:Name="labDialogue1" Content="Salut ! Moi c'est Justin. Je serais ton acolyte durant ce casse !" HorizontalAlignment="Center" Margin="0,375,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Impact"/>
+
+        <Label x:Name="labDialogue1" Content="Depechons-nous... Je peux désactiver les caméras sur ma tablette, tu as bien le mot" HorizontalAlignment="Center" Margin="0,375,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Impact" Height="65" Width="706"/>
+        <Label x:Name="labDialogue2" Content="de passe, comme c'était prévu ?" HorizontalAlignment="Center" Margin="0,397,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Impact" Height="65" Width="706"/>
         <Label Content="Justin" HorizontalAlignment="Left" Margin="40,355,0,0" VerticalAlignment="Top" Height="37" Width="53" FontSize="14" FontWeight="Bold"/>
-
-
     </Grid>
 </UserControl>
