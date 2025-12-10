@@ -6,9 +6,11 @@
         xmlns:local="clr-namespace:LouvreHeist"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <ContentControl x:Name="ZoneJeu">
-        <Image Margin="0,0,0,-16" Source="/images/scene.png" Stretch="Fill" Width="800" Height="450"/>
-    </ContentControl>
+    <Window.Background>
+        <ImageBrush ImageSource="/images/scene.png"/>
+    </Window.Background>
+    <ContentControl x:Name="ZoneJeu"/>
+
 
 
 
