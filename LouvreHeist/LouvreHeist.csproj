@@ -12,6 +12,7 @@
     <None Remove="GameOver.png" />
     <None Remove="images\date.png" />
     <None Remove="images\demarrage.png" />
+    <None Remove="images\diamant.png" />
     <None Remove="images\eggman diamond1.png" />
     <None Remove="images\eggman thinkinb.png" />
     <None Remove="images\eggman thinking.webp" />
@@ -33,6 +34,7 @@
   <ItemGroup>
     <Resource Include="images\date.png" />
     <Resource Include="images\demarrage.png" />
+    <Resource Include="images\diamant.png" />
     <Resource Include="images\eggman diamond1.png" />
     <Resource Include="images\eggman thinkinb.png" />
     <Resource Include="images\eggman thinking.webp" />
