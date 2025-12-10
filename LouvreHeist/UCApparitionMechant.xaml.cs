@@ -1,4 +1,8 @@
-﻿using System.Text;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -12,14 +16,13 @@ using System.Windows.Shapes;
 namespace LouvreHeist
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Logique d'interaction pour UCApparitionMechant.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class UCApparitionMechant : UserControl
     {
-        public MainWindow()
+        public UCApparitionMechant()
         {
             InitializeComponent();
-
         }
     }
 }
