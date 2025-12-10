@@ -16,14 +16,13 @@ using System.Windows.Shapes;
 namespace LouvreHeist
 {
     /// <summary>
-    /// Logique d'interaction pour UCDemarrage.xaml
+    /// Logique d'interaction pour UCDate.xaml
     /// </summary>
-    public partial class UCDemarrage : UserControl
+    public partial class UCDate : UserControl
     {
-        public UCDemarrage()
+        public UCDate()
         {
             InitializeComponent();
         }
-s
     }
 }
