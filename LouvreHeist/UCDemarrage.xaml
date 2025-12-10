@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Canvas>
-        <Image x:Name="fondDemarrage" Height="450" Source="/images/demarrage.png" Stretch="Fill" Width="800"/>
+        <Image Height="186" Canvas.Left="62" Source="/images/TheLouvreHeist.png" Stretch="Fill" Canvas.Top="19" Width="651"/>
         <Button x:Name="butStart" Canvas.Left="225" Canvas.Top="290" Click="butStart_Click">
             <Image Height="86" Source="/images/start menu.png" Stretch="Fill" Width="340"/>
         </Button>
@@ -31,6 +31,5 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-
     </Canvas>
 </UserControl>

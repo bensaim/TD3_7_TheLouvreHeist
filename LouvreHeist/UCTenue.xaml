@@ -7,11 +7,15 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Canvas>
-        <Label Content="Choisissez votre costume pour un vol incognito..." HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Background="#FFD07E38" FontSize="18" FontWeight="Bold" Canvas.Left="188" Canvas.Top="55"/>
-        <Button x:Name="tenue1" Content="image1" HorizontalAlignment="Left" Margin="188,161,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="tenue2" Content="image2" HorizontalAlignment="Left" Margin="551,328,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="tenue3" Content="image3" HorizontalAlignment="Left" Margin="188,323,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="tenue4" Content="image4" HorizontalAlignment="Left" Margin="551,161,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="tenue1" Canvas.Left="540" Canvas.Top="140" >
+            <Image Height="100" Source="/images/tutu.jpg"  Width="107"/>
+        </RadioButton>
+        <RadioButton x:Name="tenue2" Canvas.Left="170" Canvas.Top="140">
+            <Image Height="100" Source="/images/tenueworker.jpg" Width="107"/>
+        </RadioButton>
+        <RadioButton x:Name="tenue3" Content="RadioButton" Canvas.Left="170" Canvas.Top="350"/>
+        <RadioButton x:Name="tenue4" Content="RadioButton" Canvas.Left="540" Canvas.Top="350"/>
+
 
     </Canvas>
 </UserControl>
