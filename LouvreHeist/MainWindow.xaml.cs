@@ -24,17 +24,22 @@ namespace LouvreHeist
             uc.butStart.Click += AfficherTenue;
         }
 
+        public void ShowUCDebutRue()
+        {
+            ZoneJeu.Content = new UCDebutRue();
+        }
         private void AfficherTenue(object sender, RoutedEventArgs e)
-        {
-            UCTenue uc = new UCTenue();
-            ZoneJeu.Content = uc;
-            uc.butValiderTenue.Click += AfficherDate;
-        }
+         {
+             UCTenue uc = new UCTenue();
+             ZoneJeu.Content = uc;
+             uc.butValiderTenue.Click += AfficherDate;
+         }
 
-        private void AfficherDate(object sender, RoutedEventArgs e)
-        {
-            UCDate uc = new UCDate();
-            ZoneJeu.Content = uc;
-        }
+         private void AfficherDate(object sender, RoutedEventArgs e)
+         {
+             UCDate uc = new UCDate(this);
+             ZoneJeu.Content = uc;
+
+         }
     }
 }

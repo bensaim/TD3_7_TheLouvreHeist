@@ -20,9 +20,16 @@ namespace LouvreHeist
     /// </summary>
     public partial class UCDate : UserControl
     {
-        public UCDate()
+        private MainWindow _mainWindow;
+        public UCDate(MainWindow mainWindow)
         {
             InitializeComponent();
+            _mainWindow = mainWindow;
+        }
+
+        private void UserControl_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            _mainWindow.ShowUCDebutRue();
         }
     }
 }
