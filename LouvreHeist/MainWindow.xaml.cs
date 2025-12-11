@@ -28,9 +28,13 @@ namespace LouvreHeist
         {
             UCTenue uc = new UCTenue();
             ZoneJeu.Content = uc;
-
+            uc.butValiderTenue.Click += AfficherDate;
         }
 
-
+        private void AfficherDate(object sender, RoutedEventArgs e)
+        {
+            UCDate uc = new UCDate();
+            ZoneJeu.Content = uc;
+        }
     }
 }
