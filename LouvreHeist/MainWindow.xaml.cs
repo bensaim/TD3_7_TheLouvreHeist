@@ -19,16 +19,18 @@ namespace LouvreHeist
         public MainWindow()
         {
             InitializeComponent();
-            UCDemarrage uc = new UCDemarrage();
+            UCDebutRue uc = new UCDebutRue();
             ZoneJeu.Content = uc;
-            uc.butStart.Click += AfficherTenue;
+           // uc.butStart.Click += AfficherTenue;
         }
 
-        private void AfficherTenue(object sender, RoutedEventArgs e)
+        /*private void AfficherTenue(object sender, RoutedEventArgs e)
         {
             UCTenue uc = new UCTenue();
             ZoneJeu.Content = uc;
 
-        }
+        }*/
+
+
     }
 }

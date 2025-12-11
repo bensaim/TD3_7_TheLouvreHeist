@@ -23,6 +23,19 @@ namespace LouvreHeist
         public UCDebutRue()
         {
             InitializeComponent();
+
+            this.Focusable = true;
+            this.Focus();
+            this.KeyDown += UCDebutRue_KeyDown;
+        }
+
+
+        private void UCDebutRue_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Space)
+            {
+                labDialoguePresentation.Content = "try try try try try";
+            }
         }
     }
 }
