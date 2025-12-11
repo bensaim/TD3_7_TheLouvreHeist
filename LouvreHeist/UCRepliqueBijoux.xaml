@@ -9,7 +9,7 @@
     <Grid>
         <Image Source="/images/gallerieAppolon.jpg" Stretch="Fill" Height="450" Width="800"/>
         <Image Margin="10,72,528,20" Source="/images/eggman diamond1.png" Stretch="Fill"/>
-        <Rectangle x:Name="rectangleDialogue1" HorizontalAlignment="Left" Height="75" Margin="27,355,0,0" Stroke="White" VerticalAlignment="Top" Width="739" Fill="White" RenderTransformOrigin="0.5,0.5" RadiusX="23.601" RadiusY="23.601" >
+        <Rectangle x:Name="rectangleDialogue1" Height="75" Margin="30,355,30,20" Stroke="White" Width="739" Fill="White" RenderTransformOrigin="0.5,0.5" RadiusX="23.601" RadiusY="23.601" >
             <Rectangle.Effect>
                 <DropShadowEffect/>
             </Rectangle.Effect>
@@ -21,8 +21,8 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <Label x:Name="labDialogue2" Content="Rendez les bijoux de la couronne !" HorizontalAlignment="Center" Margin="0,367,0,0" VerticalAlignment="Top" FontSize="30" FontFamily="Comic Sans MS"/>
-        <Label x:Name="labOeufHomme1" Content="OeufHomme" HorizontalAlignment="Left" Margin="42,356,0,0" VerticalAlignment="Top" Height="36" Width="114" FontSize="14" FontWeight="Bold"/>
+        <Label x:Name="labDialogue2" Content="Rendez les bijoux de la couronne !" Margin="157,367,157,0" FontSize="30" FontFamily="Comic Sans MS"/>
+        <Label x:Name="labOeufHomme1" Content="OeufHomme" Margin="50,355,636,59" Height="36" Width="114" FontSize="14" FontWeight="Bold"/>
 
 
     </Grid>

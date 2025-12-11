@@ -5,7 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:LouvreHeist"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800"
+             >
     <Grid Background="Black">
         <Rectangle x:Name="rectangleRire" HorizontalAlignment="Left" Height="75" Margin="27,355,0,0" Stroke="White" VerticalAlignment="Top" Width="739" Fill="White" RenderTransformOrigin="0.5,0.5" RadiusX="23.601" RadiusY="23.601" >
             <Rectangle.Effect>
@@ -19,7 +20,7 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <Label x:Name="labRire" Content="MOUHAHAHA !!" HorizontalAlignment="Center" Margin="0,363,0,0" VerticalAlignment="Top" FontSize="40" FontFamily="Impact"/>
+        <Label x:Name="labRire" Content="MOUHAHAHA !!" HorizontalAlignment="Center" Margin="0,363,0,0" VerticalAlignment="Top" FontSize="40" FontFamily="Impact" />
         <Label x:Name="labInconnu" Content="???" HorizontalAlignment="Left" Margin="40,355,0,0" VerticalAlignment="Top" Height="37" Width="53" FontSize="16" FontWeight="Bold"/>
 
     </Grid>
