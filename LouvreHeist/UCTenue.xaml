@@ -7,10 +7,10 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Canvas>
-        <RadioButton x:Name="tenue1" Canvas.Left="540" Canvas.Top="140" >
+        <RadioButton x:Name="tenue1" Canvas.Left="170" Canvas.Top="140" Click="tenue1_Click" >
             <Image Height="100" Source="/images/tutu.jpg"  Width="100"/>
         </RadioButton>
-        <RadioButton x:Name="tenue2" Canvas.Left="170" Canvas.Top="140">
+        <RadioButton x:Name="tenue2" Canvas.Left="540" Canvas.Top="140">
             <Image Height="100" Source="/images/tenueworker.jpg" Width="100"/>
         </RadioButton>
         <RadioButton x:Name="tenue3" Canvas.Left="170" Canvas.Top="294">
@@ -19,7 +19,7 @@
         <RadioButton x:Name="tenue4" Canvas.Left="540" Canvas.Top="294">
         </RadioButton>
         
-        <Button x:Name="butValiderTenue" Content="VALIDER" Canvas.Left="380" Canvas.Top="251" Click="butValiderTenue_Click"/>
+        <Button x:Name="butValiderTenue" Content="VALIDER" Canvas.Left="380" Canvas.Top="251" Click="butValiderTenue_Click" IsEnabled="False"/>
 
 
         <Rectangle x:Name="rectangleDialogue1" HorizontalAlignment="Left" Height="75" Stroke="White" VerticalAlignment="Top" Width="740" Fill="White" RenderTransformOrigin="0.5,0.5" RadiusX="23.601" RadiusY="23.601" Canvas.Left="34" Canvas.Top="10" >

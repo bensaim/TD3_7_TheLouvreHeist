@@ -16,25 +16,13 @@ using System.Windows.Shapes;
 namespace LouvreHeist
 {
     /// <summary>
-    /// Logique d'interaction pour UCTenue.xaml
+    /// Logique d'interaction pour UCEchappe.xaml
     /// </summary>
-    public partial class UCTenue : UserControl
+    public partial class UCEchappe : UserControl
     {
-        public UCTenue()
+        public UCEchappe()
         {
             InitializeComponent();
-        }
-
-
-        private void butValiderTenue_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void tenue1_Click(object sender, RoutedEventArgs e)
-        {
-            butValiderTenue.IsEnabled = true;
-            //MainWindow.Perso = "Kayak";
         }
     }
 }
