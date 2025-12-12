@@ -24,10 +24,7 @@ namespace LouvreHeist
             uc.butStart.Click += AfficherTenue;
         }
 
-        public void ShowUCDebutRue()
-        {
-            ZoneJeu.Content = new UCDebutRue();
-        }
+
         private void AfficherTenue(object sender, RoutedEventArgs e)
          {
              UCTenue uc = new UCTenue();
@@ -41,5 +38,16 @@ namespace LouvreHeist
              ZoneJeu.Content = uc;
 
          }
+        public void AfficheUCDebutRue()
+        {
+            UCDebutRue uc = new UCDebutRue(this);
+            ZoneJeu.Content = uc;
+        }
+
+        public void AfficheUCQuestion()
+        {
+            UCQuestion uc = new UCQuestion();
+            ZoneJeu.Content = uc;
+        }
     }
 }

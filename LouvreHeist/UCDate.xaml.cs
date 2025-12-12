@@ -29,7 +29,7 @@ namespace LouvreHeist
 
         private void UserControl_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            _mainWindow.ShowUCDebutRue();
+            _mainWindow.AfficheUCDebutRue();
         }
     }
 }

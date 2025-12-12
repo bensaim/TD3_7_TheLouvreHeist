@@ -7,30 +7,20 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Canvas>
-        <Image Height="186" Canvas.Left="72" Source="/images/TheLouvreHeist.png" Stretch="Fill" Canvas.Top="19" Width="650" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Image x:Name="titreJeu" Height="186" Canvas.Left="72" Source="/images/TheLouvreHeist.png" Stretch="Fill" Canvas.Top="19" Width="650" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <Button x:Name="butStart" Canvas.Left="225" Canvas.Top="290" Click="butStart_Click">
             <Image Height="86" Source="/images/start menu.png" Stretch="Fill" Width="340"/>
         </Button>
         <Image x:Name="diamantDroite" Height="43" Canvas.Left="498" Source="/images/diamant.png" Stretch="Fill" Canvas.Top="55" Width="48" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center">
             <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="13.164"/>
-                    <TranslateTransform/>
-                </TransformGroup>
+                <RotateTransform Angle="13.164"/>
             </Image.RenderTransform>
         </Image>
         <Image x:Name="diamantGauche" Height="44" Canvas.Left="202" Source="/images/diamant.png" Stretch="Fill" Canvas.Top="70" Width="51" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Center">
             <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-23.714"/>
-                    <TranslateTransform/>
-                </TransformGroup>
+                <RotateTransform Angle="-23.714"/>
             </Image.RenderTransform>
         </Image>
-        <Label x:Name="desc" Content="Sauras-tu voler les bijoux de la couronne?" Canvas.Left="234" Canvas.Top="182" Foreground="White" FontFamily="Comic Sans MS" Height="86" Width="326" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="Bold" BorderThickness="10,10,10,10" FontSize="14"/>
+        <Label x:Name="desc" Content="Sauras-tu voler les bijoux de la couronne?" Canvas.Left="234" Canvas.Top="182" Foreground="White" FontFamily="Comic Sans MS" Height="86" Width="326" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" BorderThickness="10,10,10,10" FontSize="14"/>
     </Canvas>
 </UserControl>
