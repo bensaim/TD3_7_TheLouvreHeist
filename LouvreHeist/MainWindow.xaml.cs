@@ -17,7 +17,11 @@ namespace LouvreHeist
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static string[] texte = ["test1","test2"];
+        public static string[] DIALOGUE = ["test1", "test2"];
+        public static string[] QUESTIONS = ["Tu as bien le code des caméras, pas vrai ?", "blablabla", "Finis les paroles ! 'Shine bright like a...'", "Sais-tu à qui tu as affaire ?", "Quel objet tombe sur Newton dans la légende?", "Combien de diamants y avait-il sur l'écran d'accueil ?"];
+        public static string[,] REPONSES = { { "Sortie", "Louvre", "chmod u+x camera.camera", "Chaton999" }, { "", "", "", "" }, { "Vampire", "Fairy", "Cookie", "Diamond" }, { "Gonandarf", "Médecin Oeuf-Homme", "Light Vador", "Thonas" }, { "Pomme", "Monte-Charge", "Titanic", "Caillou" }, { "1", "2", "3", "4" } };
+
+
         public static int indiceDebutUCRue = 0;
         public MainWindow()
         {
@@ -41,7 +45,7 @@ namespace LouvreHeist
              ZoneJeu.Content = uc;
 
          }
-        public void AfficheUCDebutRue()
+        public void AfficheUCDialogue()
         {
             UCDialogue uc = new UCDialogue(this);
             ZoneJeu.Content = uc;
