@@ -6,13 +6,8 @@
              xmlns:local="clr-namespace:LouvreHeist"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <UserControl.Background>
-        <ImageBrush/>
-    </UserControl.Background>
+
     <Grid x:Name="grilleDebutRue" >
-        <Grid.Background>
-            <ImageBrush/>
-        </Grid.Background>
         <Image Margin="0,0,0,0" Source="/images/louvredehors.jpg" Stretch="Fill"/>
         <Rectangle x:Name="rectangleDialogue1" HorizontalAlignment="Left" Height="75" Margin="27,355,0,0" Stroke="White" VerticalAlignment="Top" Width="739" Fill="White" RenderTransformOrigin="0.5,0.5" RadiusX="23.601" RadiusY="23.601" >
             <Rectangle.Effect>
