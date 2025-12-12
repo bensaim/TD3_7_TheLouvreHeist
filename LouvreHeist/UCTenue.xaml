@@ -13,10 +13,13 @@
         <RadioButton x:Name="tenue2" Canvas.Left="540" Canvas.Top="140" Click="tenue2_Click">
             <Image Height="100" Source="/images/tenueworker.jpg" Width="100"/>
         </RadioButton>
+        
         <RadioButton x:Name="tenue3" Canvas.Left="170" Canvas.Top="294" Click="tenue3_Click">
             <Image Height="100" Source="/images/emo.png" Stretch="Fill" Width="100"/>
         </RadioButton>
+        
         <RadioButton x:Name="tenue4" Canvas.Left="540" Canvas.Top="294" Click="tenue4_Click">
+            <Image Source="/images/panneau.png" Stretch="Fill" Width="100" Height="100"/>
         </RadioButton>
         
         <Button x:Name="butValiderTenue" Content="VALIDER" Canvas.Left="380" Canvas.Top="251" Click="butValiderTenue_Click" IsEnabled="False"/>
