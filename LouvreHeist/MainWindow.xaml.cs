@@ -49,5 +49,17 @@ namespace LouvreHeist
             UCQuestion uc = new UCQuestion();
             ZoneJeu.Content = uc;
         }
+
+        public void AfficheUCEnigme()
+        {
+            UCEnigme uc = new UCEnigme();
+            ZoneJeu.Content = uc;
+        }
+
+        public void AfficheUCFenetre()
+        {
+            UCFenetre uc = new UCFenetre();
+            ZoneJeu.Content = uc;
+        }
     }
 }
