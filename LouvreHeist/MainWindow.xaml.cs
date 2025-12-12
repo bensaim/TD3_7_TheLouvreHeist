@@ -61,5 +61,20 @@ namespace LouvreHeist
             UCFenetre uc = new UCFenetre();
             ZoneJeu.Content = uc;
         }
+        public void AfficheUCBoss()
+        {
+            UCBoss uc = new UCBoss();
+            ZoneJeu.Content = uc;
+        }
+        public void AfficheUCCinematiqueFin()
+        {
+            UCCinematiqueFin uc = new UCCinematiqueFin();
+            ZoneJeu.Content = uc;
+        }
+        public void UCEchappe()
+        {
+            UCEchappe uc = new UCEchappe();
+            ZoneJeu.Content = uc;
+        }
     }
 }
