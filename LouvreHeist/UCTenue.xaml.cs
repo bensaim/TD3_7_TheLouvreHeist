@@ -34,7 +34,25 @@ namespace LouvreHeist
         private void tenue1_Click(object sender, RoutedEventArgs e)
         {
             butValiderTenue.IsEnabled = true;
-            //MainWindow.Perso = "Kayak";
+            //MainWindow.Perso = "Tutu";
+        }
+
+        private void tenue2_Click(object sender, RoutedEventArgs e)
+        {
+            butValiderTenue.IsEnabled = true;
+            MainWindow.Perso = "GiletOrange";
+        }
+
+        private void tenue3_Click(object sender, RoutedEventArgs e)
+        {
+            butValiderTenue.IsEnabled = true;
+            MainWindow.Perso = "Emo";
+        }
+
+        private void tenue4_Click(object sender, RoutedEventArgs e)
+        {
+            butValiderTenue.IsEnabled = true;
+            MainWindow.Perso = "Flou";
         }
     }
 }

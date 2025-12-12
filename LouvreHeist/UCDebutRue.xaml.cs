@@ -25,11 +25,13 @@ namespace LouvreHeist
         {
             InitializeComponent();
             _mainWindow = mainWindow;
+            butMdp.Visibility = Visibility.Hidden;
         }
 
         private void UCRue_MouseDown(object sender, MouseButtonEventArgs e)
         {
             labDialoguePresentation.Content = "t'a bien le code des caméras ?";
+            butMdp.Visibility = Visibility.Visible;
         }
 
         private void butMdp_Click(object sender, RoutedEventArgs e)

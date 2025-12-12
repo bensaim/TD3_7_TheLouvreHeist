@@ -23,7 +23,7 @@ namespace LouvreHeist
             ZoneJeu.Content = uc;
             uc.butStart.Click += AfficherTenue;
         }
-
+        public static string Perso { get; set; }
 
         private void AfficherTenue(object sender, RoutedEventArgs e)
          {
