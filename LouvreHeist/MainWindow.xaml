@@ -10,8 +10,4 @@
         <ImageBrush ImageSource="/images/scene.png"/>
     </Window.Background>
     <ContentControl x:Name="ZoneJeu"/>
-
-
-
-
 </Window>

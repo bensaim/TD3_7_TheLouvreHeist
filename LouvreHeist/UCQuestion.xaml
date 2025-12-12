@@ -6,7 +6,28 @@
              xmlns:local="clr-namespace:LouvreHeist"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+    <Canvas>
+
+
+        <Rectangle x:Name="rectangleDialogue1" HorizontalAlignment="Left" Height="75" Stroke="White" VerticalAlignment="Top" Width="740" Fill="White" RenderTransformOrigin="0.5,0.5" RadiusX="23.601" RadiusY="23.601" Canvas.Left="23" Canvas.Top="21" >
+            <Rectangle.Effect>
+                <DropShadowEffect/>
+            </Rectangle.Effect>
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+
+        <Label x:Name="labQuestion" Content="Rentrer la question ici" Canvas.Left="338" Canvas.Top="46" VerticalAlignment="Center"/>
+        <Button x:Name="butRep1" Content="Button"  Canvas.Left="128" Canvas.Top="165"/>
+        <Button x:Name="butRep2" Content="Button"  Canvas.Left="596" Canvas.Top="330"/>
+        <Button x:Name="butRep3" Content="Button"  Canvas.Left="128" Canvas.Top="330"/>
+        <Button x:Name="butRep4" Content="Button"  Canvas.Left="596" Canvas.Top="165"/>
+
+
+    </Canvas>
 </UserControl>

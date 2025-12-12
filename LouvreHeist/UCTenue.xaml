@@ -17,7 +17,6 @@
             <Image Height="100" Source="/images/emo.png" Stretch="Fill" Width="100"/>
         </RadioButton>
         <RadioButton x:Name="tenue4" Canvas.Left="540" Canvas.Top="294">
-            <Image Height="100" Source="/images/Magicball.jpg" Stretch="Fill" Width="100"/>
         </RadioButton>
         
         <Button x:Name="butValiderTenue" Content="VALIDER" Canvas.Left="380" Canvas.Top="251" Click="butValiderTenue_Click"/>
