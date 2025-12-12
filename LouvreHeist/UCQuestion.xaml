@@ -13,13 +13,7 @@
             <Rectangle.Effect>
                 <DropShadowEffect/>
             </Rectangle.Effect>
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
+
         </Rectangle>
 
         <Label x:Name="labQuestion" Content="Rentrer la question ici" Canvas.Left="338" Canvas.Top="46" VerticalAlignment="Center"/>

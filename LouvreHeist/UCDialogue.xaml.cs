@@ -16,28 +16,30 @@ using System.Windows.Shapes;
 namespace LouvreHeist
 {
     /// <summary>
-    /// Logique d'interaction pour UCDebutRue.xaml
+    /// Logique d'interaction pour UCDialogue.xaml
     /// </summary>
-    public partial class UCDebutRue : UserControl
+    public partial class UCDialogue : UserControl
     {
         private MainWindow _mainWindow;
-        public UCDebutRue(MainWindow mainWindow)
+        public UCDialogue(MainWindow mainWindow)
         {
             InitializeComponent();
+            labDialoguePresentation.Content = MainWindow.texte[MainWindow.indiceDebutUCRue];
+            MainWindow.indiceDebutUCRue++;
             _mainWindow = mainWindow;
             butMdp.Visibility = Visibility.Hidden;
         }
 
-        private void UCRue_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            labDialoguePresentation.Content = "t'a bien le code des caméras ?";
-            butMdp.Visibility = Visibility.Visible;
-        }
 
-        private void butMdp_Click(object sender, RoutedEventArgs e)
+        private void butMdp_Click_1(object sender, RoutedEventArgs e)
         {
             _mainWindow.AfficheUCQuestion();
         }
 
+        private void UserControl_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            labDialoguePresentation.Content = "t'a bien le code des caméras ?";
+            butMdp.Visibility = Visibility.Visible;
+        }
     }
 }

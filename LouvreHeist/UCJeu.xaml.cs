@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace LouvreHeist
 {
     /// <summary>
-    /// Logique d'interaction pour UCCinematiqueFin.xaml
+    /// Logique d'interaction pour UCJeu.xaml
     /// </summary>
-    public partial class UCCinematiqueFin : UserControl
+    public partial class UCJeu : UserControl
     {
-        public UCCinematiqueFin()
+        public UCJeu()
         {
             InitializeComponent();
         }

@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace LouvreHeist
 {
     /// <summary>
-    /// Logique d'interaction pour UCEchappe.xaml
+    /// Logique d'interaction pour UCGagner.xaml
     /// </summary>
-    public partial class UCEchappe : UserControl
+    public partial class UCGagner : UserControl
     {
-        public UCEchappe()
+        public UCGagner()
         {
             InitializeComponent();
         }

@@ -11,11 +11,14 @@ using System.Windows.Shapes;
 
 namespace LouvreHeist
 {
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static string[] texte = ["test1","test2"];
+        public static int indiceDebutUCRue = 0;
         public MainWindow()
         {
             InitializeComponent();
@@ -40,7 +43,7 @@ namespace LouvreHeist
          }
         public void AfficheUCDebutRue()
         {
-            UCDebutRue uc = new UCDebutRue(this);
+            UCDialogue uc = new UCDialogue(this);
             ZoneJeu.Content = uc;
         }
 
@@ -50,31 +53,6 @@ namespace LouvreHeist
             ZoneJeu.Content = uc;
         }
 
-        public void AfficheUCEnigme()
-        {
-            UCEnigme uc = new UCEnigme();
-            ZoneJeu.Content = uc;
-        }
 
-        public void AfficheUCFenetre()
-        {
-            UCFenetre uc = new UCFenetre();
-            ZoneJeu.Content = uc;
-        }
-        public void AfficheUCBoss()
-        {
-            UCBoss uc = new UCBoss();
-            ZoneJeu.Content = uc;
-        }
-        public void AfficheUCCinematiqueFin()
-        {
-            UCCinematiqueFin uc = new UCCinematiqueFin();
-            ZoneJeu.Content = uc;
-        }
-        public void UCEchappe()
-        {
-            UCEchappe uc = new UCEchappe();
-            ZoneJeu.Content = uc;
-        }
     }
 }
