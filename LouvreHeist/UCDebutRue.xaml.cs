@@ -20,22 +20,22 @@ namespace LouvreHeist
     /// </summary>
     public partial class UCDebutRue : UserControl
     {
-        public UCDebutRue()
+        private MainWindow _mainWindow;
+        public UCDebutRue(MainWindow mainWindow)
         {
             InitializeComponent();
-
-            this.Focusable = true;
-            this.Focus();
-            this.KeyDown += UCDebutRue_KeyDown;
+            _mainWindow = mainWindow;
         }
 
-
-        private void UCDebutRue_KeyDown(object sender, KeyEventArgs e)
+        private void UCRue_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if (e.Key == Key.Space)
-            {
-                labDialoguePresentation.Content = "try try try try try";
-            }
+            labDialoguePresentation.Content = "t'a bien le code des caméras ?";
         }
+
+        private void butMdp_Click(object sender, RoutedEventArgs e)
+        {
+            _mainWindow.AfficheUCQuestion();
+        }
+
     }
 }
