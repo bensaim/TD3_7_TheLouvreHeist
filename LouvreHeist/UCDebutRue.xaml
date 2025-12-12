@@ -9,7 +9,8 @@
 
     <Grid x:Name="grilleDebutRue" >
         <Image Margin="0,0,0,0" Source="/images/louvredehors.jpg" Stretch="Fill"/>
-        <Rectangle x:Name="rectangleDialogue1" HorizontalAlignment="Left" Height="75" Margin="27,355,0,0" Stroke="White" VerticalAlignment="Top" Width="739" Fill="White" RenderTransformOrigin="0.5,0.5" RadiusX="23.601" RadiusY="23.601" >
+        <Viewbox Stretch="Uniform">
+        <Rectangle x:Name="rectangleDialogue1" Height="75" Stroke="White" Width="740" Fill="White"  RadiusX="23.601" RadiusY="23.601" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,330,0,0" >
             <Rectangle.Effect>
                 <DropShadowEffect/>
             </Rectangle.Effect>
@@ -21,7 +22,8 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <Label x:Name="labDialoguePresentation" Content="Salut ! Moi c'est Justin. Je serais ton acolyte durant ce casse !" Margin="40,374,-40,2" FontSize="20" FontFamily="Impact"/>
-        <Label Content="Justin" HorizontalAlignment="Left" Margin="40,355,0,0" VerticalAlignment="Top" Height="37" Width="53" FontSize="14" FontWeight="Bold"/>
+        </Viewbox>
+        <Label x:Name="labDialoguePresentation" Content="Salut ! Moi c'est Justin. Je serais ton acolyte durant ce casse !" Margin="0,0,0,30" FontSize="20" FontFamily="Impact" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+        <Label Content="Justin" HorizontalAlignment="Left" Margin="40,0,0,50" VerticalAlignment="Bottom" Height="36" Width="53" FontSize="14" FontWeight="Bold"/>
     </Grid>
 </UserControl>
