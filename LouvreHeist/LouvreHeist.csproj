@@ -10,6 +10,9 @@
 
   <ItemGroup>
     <None Remove="GameOver.png" />
+    <None Remove="images\bordureTrottoir.png" />
+    <None Remove="images\courseJustin.jpg" />
+    <None Remove="images\courseLouvre.png" />
     <None Remove="images\date.png" />
     <None Remove="images\demarrage.png" />
     <None Remove="images\diamant.png" />
@@ -36,6 +39,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="images\bordureTrottoir.png" />
+    <Resource Include="images\courseJustin.jpg" />
+    <Resource Include="images\courseLouvre.png" />
     <Resource Include="images\date.png" />
     <Resource Include="images\demarrage.png" />
     <Resource Include="images\diamant.png" />
