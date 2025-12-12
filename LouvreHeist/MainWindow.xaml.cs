@@ -17,7 +17,7 @@ namespace LouvreHeist
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static string[] DIALOGUE = ["test1", "test2"];
+        public static string[] DIALOGUE = ["Salut ! Moi c'est Justin. Je serais ton accolyte durant ce casse !", "Je peux désactiver les caméras avec ma tablette. Tu as bien le mot de passe ?", "Super les caméras sont désactivées, on peut y aller !", "Regarde une énigme cachée sous le monte-charge, on doit la résoudre !", "Maintenant, on doit casser la fenêtre, prends la disqueuse.", "Oh mince, tu t'es trompé tu as pris un lecteur de disque ! C'est quoi cette chanson...", "MOUHAHAHA !! Le diamant est à moi !" , "Rendez les bijoux de la couronne !", "Trop bien on a enfin battu Oeuf-Homme !", "Oh non, la police arrive on doit s'échapper !"];
         public static string[] QUESTIONS = ["Tu as bien le code des caméras, pas vrai ?", "blablabla", "Finis les paroles ! 'Shine bright like a...'", "Sais-tu à qui tu as affaire ?", "Quel objet tombe sur Newton dans la légende?", "Combien de diamants y avait-il sur l'écran d'accueil ?"];
         public static string[,] REPONSES = { { "Sortie", "Louvre", "chmod u+x camera.camera", "Chaton999" }, { "", "", "", "" }, { "Vampire", "Fairy", "Cookie", "Diamond" }, { "Gonandarf", "Médecin Oeuf-Homme", "Light Vador", "Thonas" }, { "Pomme", "Monte-Charge", "Titanic", "Caillou" }, { "1", "2", "3", "4" } };
 
