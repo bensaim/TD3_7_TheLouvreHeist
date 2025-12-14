@@ -23,6 +23,8 @@ namespace LouvreHeist
         public UCTenue()
         {
             InitializeComponent();
+            labDialoguePresentation.Content = MainWindow.DIALOGUE[MainWindow.indiceDialogue];
+            MainWindow.indiceDialogue++;
         }
 
 
@@ -34,7 +36,7 @@ namespace LouvreHeist
         private void tenue1_Click(object sender, RoutedEventArgs e)
         {
             butValiderTenue.IsEnabled = true;
-            //MainWindow.Perso = "Tutu";
+            MainWindow.Perso = "Tutu";
         }
 
         private void tenue2_Click(object sender, RoutedEventArgs e)
