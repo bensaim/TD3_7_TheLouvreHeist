@@ -16,29 +16,20 @@ using System.Windows.Shapes;
 namespace LouvreHeist
 {
     /// <summary>
-    /// Logique d'interaction pour UCPerd.xaml
+    /// Logique d'interaction pour UCCinematique.xaml
     /// </summary>
-    public partial class UCPerd : UserControl
+    public partial class UCCinematique : UserControl
     {
         private MainWindow _mainWindow;
-        public UCPerd(MainWindow mainWindow)
+        public UCCinematique(MainWindow mainWindow)
         {
             InitializeComponent();
             _mainWindow = mainWindow;
         }
 
-        private void butRejouer_Click(object sender, RoutedEventArgs e)
+        private void UCCine_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            MainWindow.indiceDialogue = 0;
-            MainWindow.indiceBoutons = 0;
-            MainWindow.indiceQuestions = 0;
-            MainWindow.indiceReponses = 0;
-            _mainWindow.AfficheUCTenue();
-        }
-
-        private void butQuitter_Click(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
+            _mainWindow.AfficheUCDialogue();
         }
     }
 }

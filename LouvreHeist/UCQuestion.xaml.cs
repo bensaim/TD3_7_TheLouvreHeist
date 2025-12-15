@@ -44,7 +44,10 @@ namespace LouvreHeist
         private void butRep1_Click(object sender, RoutedEventArgs e)
         {
             if (1 == MainWindow.BONNEREP[MainWindow.indiceQuestions - 1, 0])
-                _mainWindow.AfficheUCDialogue();
+                if (MainWindow.indiceQuestions == 2)
+                {
+                    _mainWindow.AfficheUCCinematique();
+                }
             else
                 _mainWindow.AfficheUCPerd();
         }
