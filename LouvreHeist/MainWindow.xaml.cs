@@ -47,9 +47,9 @@ namespace LouvreHeist
               ZoneJeu.Content = uc;
           }
 
-          public void AfficheUCDate()
+          public void AfficheUCCinematique()
           {
-              UCDate uc = new UCDate(this);
+              UCCinematique uc = new UCCinematique(this);
               ZoneJeu.Content = uc;
 
           }

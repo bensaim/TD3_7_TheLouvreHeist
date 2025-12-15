@@ -32,7 +32,7 @@ namespace LouvreHeist
 
         private void butValiderTenue_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.AfficheUCDate();
+            _mainWindow.AfficheUCCinematique();
         }
 
         private void tenue1_Click(object sender, RoutedEventArgs e)
