@@ -28,18 +28,18 @@ namespace LouvreHeist
             InitializeComponent();
             UCDemarrage uc = new UCDemarrage();
             ZoneJeu.Content = uc;
-            uc.butStart.Click += AfficherTenue;
+            uc.butStart.Click += AfficheUCTenue;
         }
         public static string Perso { get; set; }
 
-        private void AfficherTenue(object sender, RoutedEventArgs e)
+        private void AfficheUCTenue(object sender, RoutedEventArgs e)
          {
              UCTenue uc = new UCTenue();
              ZoneJeu.Content = uc;
-             uc.butValiderTenue.Click += AfficherDate;
+             uc.butValiderTenue.Click += AfficheUCDate;
          }
 
-         private void AfficherDate(object sender, RoutedEventArgs e)
+         private void AfficheUCDate(object sender, RoutedEventArgs e)
          {
              UCDate uc = new UCDate(this);
              ZoneJeu.Content = uc;
