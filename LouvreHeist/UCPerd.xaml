@@ -13,6 +13,6 @@
 
 
         <Button x:Name="butRejouer" Content="Rejouer" HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" Width="90" Canvas.Left="274" Canvas.Top="379" Click="butRejouer_Click"/>
-        <Button x:Name="butQuitter" Content="Quitter" HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" Width="102" Canvas.Left="434" Canvas.Top="379"/>
+        <Button x:Name="butQuitter" Content="Quitter" HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" Width="102" Canvas.Left="434" Canvas.Top="379" Click="butQuitter_Click"/>
     </Canvas>
 </UserControl>

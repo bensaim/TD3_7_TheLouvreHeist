@@ -35,5 +35,10 @@ namespace LouvreHeist
             MainWindow.indiceReponses = 0;
             _mainWindow.AfficheUCTenue();
         }
+
+        private void butQuitter_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }
