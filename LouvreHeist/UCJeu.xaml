@@ -12,6 +12,7 @@
         <Image x:Name="imgFond2" Source="/images/courseLouvre.png" Stretch="Fill" Height="341" Canvas.Left="800" Width="800"/>
         <Image x:Name="imgSol2" Source="/images/bordureTrottoir.png" Stretch="Fill" Height="109" Width="800" Canvas.Left="800" Canvas.Top="341" />
         <Image x:Name="imgPerso" Source="/images/courseJustin.jpg" Stretch="Fill" Canvas.Left="10" Canvas.Top="268" Height="147" Width="153"/>
+        <Image Height="99" Canvas.Left="506" Source="/images/policier.jpeg" Stretch="Fill" Width="107" Canvas.Top="341"/>
 
     </Canvas>
 </UserControl>

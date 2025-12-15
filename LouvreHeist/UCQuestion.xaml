@@ -16,7 +16,7 @@
 
         </Rectangle>
 
-        <Label x:Name="labQuestion" Content="Rentrer la question ici" Canvas.Left="338" Canvas.Top="46" VerticalAlignment="Center"/>
+        <Label x:Name="labQuestion" Canvas.Left="338" Canvas.Top="46" VerticalAlignment="Center"/>
         <Button x:Name="butRep1" Content="Button"  Canvas.Left="128" Canvas.Top="165"/>
         <Button x:Name="butRep2" Content="Button"  Canvas.Left="596" Canvas.Top="330"/>
         <Button x:Name="butRep3" Content="Button"  Canvas.Left="128" Canvas.Top="330"/>
