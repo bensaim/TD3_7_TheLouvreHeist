@@ -29,6 +29,8 @@ namespace LouvreHeist
         {
             InitializeComponent();
             InitializeTimer();
+            string nomFichierImage = $"pack://application:,,,/images/JustinJeu{MainWindow.Perso}.png";
+            imgJustinJeu.Source = new BitmapImage(new Uri(nomFichierImage));
         }
         private void InitializeTimer()
         {
@@ -46,11 +48,13 @@ namespace LouvreHeist
             Deplace(imgFond2, pasFond);
             Deplace(imgSol1, pasSol);
             Deplace(imgSol2, pasSol);
+            Deplace(imgPolicier, pasSol);
 
-
+            if (saut)
+                Canvas.SetBottom(imgJustinJeu, Canvas.GetBottom(imgJustinJeu) + 50);
         }
 
-        
+
         public void Deplace(Image image, int pas)
         {
             Canvas.SetLeft(image, Canvas.GetLeft(image) - pas);
@@ -59,5 +63,45 @@ namespace LouvreHeist
                 Canvas.SetLeft(image, canvasJeu.ActualWidth);
         }
 
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            minuterie.Stop();
+            ParametreWindow parametreWindow = new ParametreWindow();
+            bool? rep = parametreWindow.ShowDialog();
+            if (rep == true)
+            {
+                minuterie.Start();
+                vitesse = (int)parametreWindow.slidVitesse.Value;
+
+                // ATTENTION : LES PAS DOIVENT ETRE DES MULTIPLES
+                // DE LA TAILLE DE L’IMAGE A DEPLACER
+                if (vitesse == 2)
+                {
+                    pasSol = 8;
+                    pasFond = 2;
+                }
+                else if (vitesse == 1)
+                {
+                    pasSol = 4;
+                    pasFond = 1;
+                }
+                if (vitesse == 3)
+                {
+                    pasSol = 16;
+                    pasFond = 4;
+                }
+            }
+        }
+        private static bool saut;
+
+        private void imgJustinJeu_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            saut=true;
+        }
+
+        private void imgJustinJeu_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            saut=false;
+        }
     }
 }

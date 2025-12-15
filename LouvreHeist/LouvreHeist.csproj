@@ -46,7 +46,6 @@
     <None Remove="images\MortCinematique.png" />
     <None Remove="images\panneau.png" />
     <None Remove="images\pokemon.webp" />
-    <None Remove="images\policier.jpeg" />
     <None Remove="images\scene.png" />
     <None Remove="images\start menu.png" />
     <None Remove="images\tenueworker.jpg" />
@@ -92,7 +91,7 @@
     <Resource Include="images\MortCinematique.png" />
     <Resource Include="images\panneau.png" />
     <Resource Include="images\pokemon.webp" />
-    <Resource Include="images\policier.jpeg" />
+    <Resource Include="images\policier.png" />
     <Resource Include="images\scene.png" />
     <Resource Include="images\start menu.png" />
     <Resource Include="images\tenueworker.jpg" />
