@@ -6,13 +6,49 @@
              xmlns:local="clr-namespace:LouvreHeist"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Canvas x:Name="canvasJeu">
-        <Image x:Name="imgFond1" Source="/images/courseLouvre.png" Stretch="Fill" Height="341" Width="800" Canvas.Left="0" Canvas.Top="0" />
-        <Image x:Name="imgSol1" Source="/images/bordureTrottoir.png" Stretch="Fill" Canvas.Bottom="0" Height="109" Width="800" Canvas.Left="0"/>
-        <Image x:Name="imgFond2" Source="/images/courseLouvre.png" Stretch="Fill" Height="341" Canvas.Left="800" Width="800"/>
-        <Image x:Name="imgSol2" Source="/images/bordureTrottoir.png" Stretch="Fill" Height="109" Width="800" Canvas.Left="800" Canvas.Bottom="0" />
-        <Image x:Name="imgPolicier" Height="298" Canvas.Left="495" Source="/images/policier.png" Stretch="Fill" Canvas.Top="149" Width="201" HorizontalAlignment="Center" VerticalAlignment="Top"/>
-        <Image x:Name="imgJustinJeu" Height="200" Canvas.Left="86" Source="/images/JustinJeu1.png" Stretch="Fill" Canvas.Top="240" Width="200" MouseDown="imgJustinJeu_MouseDown" MouseUp="imgJustinJeu_MouseUp" VerticalAlignment="Bottom" Canvas.Bottom="0"/>
+    <Canvas x:Name="canvasJeu" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MouseLeftButtonDown="canvasJeu_MouseLeftButtonDown"
+        >
 
+        <!-- Fond 1 -->
+        <Image x:Name="imgFond1" Source="/images/courseLouvre.png"
+           Stretch="Fill"
+           Width="{Binding ActualWidth, ElementName=canvasJeu}"
+           Height="341"
+           Canvas.Left="0" Canvas.Top="0"/>
+
+        <!-- Fond 2 (pour enchaînement) -->
+        <Image x:Name="imgFond2" Source="/images/courseLouvre.png"
+           Stretch="Fill"
+           
+           Canvas.Left="{Binding ActualWidth, ElementName=canvasJeu}" Canvas.Top="0"/>
+
+        <!-- Sol 1 -->
+        <Image x:Name="imgSol1" Source="/images/bordureTrottoir.png"
+           Stretch="Fill"
+           
+           Canvas.Top="341"
+           Canvas.Left="0"/>
+
+        <!-- Sol 2 -->
+        <Image x:Name="imgSol2" Source="/images/bordureTrottoir.png"
+           Stretch="Fill"
+           Width="{Binding ActualWidth, ElementName=canvasJeu}"
+           Height="109"
+           Canvas.Top="341"
+           Canvas.Left="{Binding ActualWidth, ElementName=canvasJeu}"/>
+
+        <!-- Policier -->
+        <Image x:Name="imgPolicier" Source="/images/policier.png"
+           Stretch="Fill"
+           Width="201" Height="298"
+           Canvas.Left="495" Canvas.Top="149"/>
+
+        <!-- Justin -->
+        <Image x:Name="imgJustinJeu" Source="/images/JustinJeu1.png"
+           Stretch="Fill"
+           Width="200" Height="215"
+           Canvas.Left="86" Canvas.Top="225" HorizontalAlignment="Center" VerticalAlignment="Top"
+           />
     </Canvas>
+
 </UserControl>
