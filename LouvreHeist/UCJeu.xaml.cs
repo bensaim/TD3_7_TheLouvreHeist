@@ -25,6 +25,7 @@ namespace LouvreHeist
         private static int pasFond = 2;
         public static int vitesse = 2;
         private DispatcherTimer minuterie;
+
         public UCJeu()
         {
             InitializeComponent();
@@ -66,7 +67,7 @@ namespace LouvreHeist
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
             minuterie.Stop();
-            ParametreWindow parametreWindow = new ParametreWindow();
+            ParametresWindow parametreWindow = new ParametresWindow();
             bool? rep = parametreWindow.ShowDialog();
             if (rep == true)
             {
