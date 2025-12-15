@@ -7,10 +7,10 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Canvas x:Name="canvasJeu">
-        <Image x:Name="imgFond1" Source="/images/courseLouvre.png" Stretch="Fill" Height="341" Width="800" />
-        <Image x:Name="imgSol1" Source="/images/bordureTrottoir.png" Stretch="Fill" Canvas.Top="341" Height="109" Width="800"/>
+        <Image x:Name="imgFond1" Source="/images/courseLouvre.png" Stretch="Fill" Height="341" Width="800" Canvas.Left="0" Canvas.Top="0" />
+        <Image x:Name="imgSol1" Source="/images/bordureTrottoir.png" Stretch="Fill" Canvas.Bottom="0" Height="109" Width="800" Canvas.Left="0"/>
         <Image x:Name="imgFond2" Source="/images/courseLouvre.png" Stretch="Fill" Height="341" Canvas.Left="800" Width="800"/>
-        <Image x:Name="imgSol2" Source="/images/bordureTrottoir.png" Stretch="Fill" Height="109" Width="800" Canvas.Left="800" Canvas.Top="341" />
+        <Image x:Name="imgSol2" Source="/images/bordureTrottoir.png" Stretch="Fill" Height="109" Width="800" Canvas.Left="800" Canvas.Bottom="0" />
 
         <Image Height="100" Canvas.Left="506" Source="/images/policier.jpeg" Stretch="Fill" Width="107" Canvas.Top="341"/>
         <Image Height="200" Canvas.Left="86" Source="/images/JustinJeu1.png" Stretch="Fill" Canvas.Top="240" Width="200"/>
