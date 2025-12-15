@@ -23,6 +23,8 @@ namespace LouvreHeist
         public static string[] BOUTONS = ["Je l'ai.", "Hum...", "Shine bright like a...", "Boss Fight", "En garde crâne d'oeuf !", "YAAAAAAAAAAAA", "S'échapper"];
         public static int[,] BONNEREP = { { 1 }, { 2 }, { 0 }, { 3 } };
 
+
+
         public static int indiceDialogue = 0;
         public static int indiceBoutons = 0;
         public static int indiceQuestions = 0;

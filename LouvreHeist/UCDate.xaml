@@ -7,7 +7,9 @@
              xmlns:local="clr-namespace:LouvreHeist"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Width="800" Background="Transparent" >
-        <Image Source="/images/date.png" Stretch="Fill" Width="800" Height="450"/>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/images/date.png"/>
+        </Grid.Background>
     </Grid>
 </UserControl>
