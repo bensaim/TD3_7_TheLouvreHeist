@@ -23,6 +23,8 @@ namespace LouvreHeist
         public UCQuestion()
         {
             InitializeComponent();
+            labQuestion.Content = MainWindow.QUESTIONS[MainWindow.indiceQuestions];
+            MainWindow.indiceDialogue++;
         }
     }
 }
