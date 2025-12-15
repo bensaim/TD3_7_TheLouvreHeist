@@ -43,8 +43,23 @@ namespace LouvreHeist
 
         private void butRep1_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.AfficheUCDialogue();
 
+            _mainWindow.AfficheUCDialogue();
+        }
+
+        private void butRep2_Click(object sender, RoutedEventArgs e)
+        {
+               _mainWindow.AfficheUCDialogue();
+        }
+
+        private void butRep3_Click(object sender, RoutedEventArgs e)
+        {
+            _mainWindow.AfficheUCDialogue();
+        }
+
+        private void butRep4_Click(object sender, RoutedEventArgs e)
+        {
+            _mainWindow.AfficheUCDialogue();
         }
     }
 }
