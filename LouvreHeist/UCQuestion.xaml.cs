@@ -43,23 +43,34 @@ namespace LouvreHeist
 
         private void butRep1_Click(object sender, RoutedEventArgs e)
         {
-
-            _mainWindow.AfficheUCDialogue();
+            if (1 == MainWindow.BONNEREP[MainWindow.indiceQuestions - 1, 0])
+                _mainWindow.AfficheUCDialogue();
+            else
+                _mainWindow.AfficheUCPerd();
         }
 
         private void butRep2_Click(object sender, RoutedEventArgs e)
         {
-               _mainWindow.AfficheUCDialogue();
+            if (2 == MainWindow.BONNEREP[MainWindow.indiceQuestions - 1, 0])
+                _mainWindow.AfficheUCDialogue();
+            else
+                _mainWindow.AfficheUCPerd();
         }
 
         private void butRep3_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.AfficheUCDialogue();
+            if (3 == MainWindow.BONNEREP[MainWindow.indiceQuestions - 1, 0])
+                _mainWindow.AfficheUCDialogue();
+            else
+                _mainWindow.AfficheUCPerd();
         }
 
         private void butRep4_Click(object sender, RoutedEventArgs e)
         {
-            _mainWindow.AfficheUCDialogue();
+            if (4 == MainWindow.BONNEREP[MainWindow.indiceQuestions - 1, 0])
+                _mainWindow.AfficheUCDialogue();
+            else
+                _mainWindow.AfficheUCPerd();
         }
     }
 }

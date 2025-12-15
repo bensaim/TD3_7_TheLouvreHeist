@@ -30,22 +30,28 @@ namespace LouvreHeist
             imgJustinDialogue.Source = new BitmapImage(new Uri(nomFichierImage));
             labDialoguePresentation.Content = MainWindow.DIALOGUE[MainWindow.indiceDialogue ];
             _mainWindow = mainWindow;
-            butMdp.Content = MainWindow.BOUTONS[MainWindow.indiceBoutons];
+            butSuite.Content = MainWindow.BOUTONS[MainWindow.indiceBoutons];
             MainWindow.indiceBoutons++;
-            butMdp.Visibility = Visibility.Hidden;
+            butSuite.Visibility = Visibility.Hidden;
             MainWindow.indiceDialogue = MainWindow.indiceDialogue + 2;
         }
 
 
-        private void butMdp_Click_1(object sender, RoutedEventArgs e)
-        {
-            _mainWindow.AfficheUCQuestion();
-        }
+
 
         private void UserControl_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            butMdp.Visibility = Visibility.Visible;
+            butSuite.Visibility = Visibility.Visible;
             labDialoguePresentation.Content = MainWindow.DIALOGUE[indiceD + 1 ];
+        }
+
+        private void butSuite_Click(object sender, RoutedEventArgs e)
+        {
+            if (MainWindow.indiceBoutons == MainWindow.BOUTONS.Length)
+                _mainWindow.AfficheUCJeu();
+            else
+                _mainWindow.AfficheUCQuestion();
+
         }
     }
 }
