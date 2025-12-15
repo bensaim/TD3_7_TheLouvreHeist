@@ -9,7 +9,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/images/date.png"/>
+            <ImageBrush x:Name="Cine" ImageSource="/images/date.png"/>
         </Grid.Background>
     </Grid>
 </UserControl>

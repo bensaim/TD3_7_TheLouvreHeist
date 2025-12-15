@@ -13,7 +13,6 @@
     <None Remove="images\bordureTrottoir.png" />
     <None Remove="images\courseJustin.jpg" />
     <None Remove="images\courseLouvre.png" />
-    <None Remove="images\date.png" />
     <None Remove="images\demarrage.png" />
     <None Remove="images\diamant.png" />
     <None Remove="images\eggman diamond1.png" />
@@ -24,7 +23,6 @@
     <None Remove="images\egmman diamond 3.png" />
     <None Remove="images\egmman t pose.png" />
     <None Remove="images\emo.png" />
-    <None Remove="images\FenetreCinematique.png" />
     <None Remove="images\fondScene.png" />
     <None Remove="images\Gagner.png" />
     <None Remove="images\GameOver.png" />
@@ -43,7 +41,6 @@
     <None Remove="images\louvredehors.jpg" />
     <None Remove="images\louvreMonteCharge.png" />
     <None Remove="images\Magicball.jpg" />
-    <None Remove="images\MortCinematique.png" />
     <None Remove="images\panneau.png" />
     <None Remove="images\pokemon.webp" />
     <None Remove="images\scene.png" />
@@ -58,7 +55,7 @@
     <Resource Include="images\bordureTrottoir.png" />
     <Resource Include="images\courseJustin.jpg" />
     <Resource Include="images\courseLouvre.png" />
-    <Resource Include="images\date.png" />
+    <Resource Include="images\cine1.png" />
     <Resource Include="images\demarrage.png" />
     <Resource Include="images\diamant.png" />
     <Resource Include="images\eggman diamond1.png" />
@@ -69,7 +66,7 @@
     <Resource Include="images\egmman diamond 3.png" />
     <Resource Include="images\egmman t pose.png" />
     <Resource Include="images\emo.png" />
-    <Resource Include="images\FenetreCinematique.png" />
+    <Resource Include="images\cine2.png" />
     <Resource Include="images\fondScene.png" />
     <Resource Include="images\Gagner.png" />
     <Resource Include="images\GameOver.png" />
@@ -88,7 +85,7 @@
     <Resource Include="images\louvredehors.jpg" />
     <Resource Include="images\louvreMonteCharge.png" />
     <Resource Include="images\Magicball.jpg" />
-    <Resource Include="images\MortCinematique.png" />
+    <Resource Include="images\cine3.png" />
     <Resource Include="images\panneau.png" />
     <Resource Include="images\pokemon.webp" />
     <Resource Include="images\policier.png" />

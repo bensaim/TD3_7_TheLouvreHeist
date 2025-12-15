@@ -35,12 +35,12 @@ namespace LouvreHeist
             InitializeComponent();
             UCDemarrage uc = new UCDemarrage(this);
             ZoneJeu.Content = uc;
-
+            MainWindow.Cinematique = "1";
 
 
         }
         public static string Perso { get; set; }
-
+        public static string Cinematique { get; set; }
         public void AfficheUCTenue()
           {
               UCTenue uc = new UCTenue(this);
