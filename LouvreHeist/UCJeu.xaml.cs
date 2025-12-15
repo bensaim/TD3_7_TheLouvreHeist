@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace LouvreHeist
 {
@@ -23,9 +24,21 @@ namespace LouvreHeist
         private static int pasSol = 8;
         private static int pasFond = 2;
         public static int vitesse = 2;
+        private DispatcherTimer minuterie;
         public UCJeu()
         {
             InitializeComponent();
+            InitializeTimer();
+        }
+        private void InitializeTimer()
+        {
+            minuterie = new DispatcherTimer();
+            // configure l'intervalle du Timer :62 images par s
+            minuterie.Interval = TimeSpan.FromMilliseconds(16);
+            // associe l’appel de la méthode Jeu à la fin de la minuterie
+            minuterie.Tick += Jeu;
+            // lancement du timer
+            minuterie.Start();
         }
         private void Jeu(object? sender, EventArgs e)
         {
@@ -33,7 +46,11 @@ namespace LouvreHeist
             Deplace(imgFond2, pasFond);
             Deplace(imgSol1, pasSol);
             Deplace(imgSol2, pasSol);
+
+
         }
+
+        
         public void Deplace(Image image, int pas)
         {
             Canvas.SetLeft(image, Canvas.GetLeft(image) - pas);
