@@ -29,6 +29,7 @@
     <None Remove="images\louvredehors.jpg" />
     <None Remove="images\louvreMonteCharge.png" />
     <None Remove="images\Magicball.jpg" />
+    <None Remove="images\panneau.png" />
     <None Remove="images\pokemon.webp" />
     <None Remove="images\scene.png" />
     <None Remove="images\start menu.png" />
@@ -58,6 +59,7 @@
     <Resource Include="images\louvredehors.jpg" />
     <Resource Include="images\louvreMonteCharge.png" />
     <Resource Include="images\Magicball.jpg" />
+    <Resource Include="images\panneau.png" />
     <Resource Include="images\pokemon.webp" />
     <Resource Include="images\scene.png" />
     <Resource Include="images\start menu.png" />

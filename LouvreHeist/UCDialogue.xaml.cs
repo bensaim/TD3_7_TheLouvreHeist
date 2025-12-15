@@ -41,7 +41,7 @@ namespace LouvreHeist
         private void UserControl_MouseDown(object sender, MouseButtonEventArgs e)
         {
             butMdp.Visibility = Visibility.Visible;
-            labDialoguePresentation.Content = MainWindow.DIALOGUE[3];
+            labDialoguePresentation.Content = MainWindow.DIALOGUE[2];
             MainWindow.indiceDialogue++;
         }
     }
