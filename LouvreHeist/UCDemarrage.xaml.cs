@@ -20,14 +20,16 @@ namespace LouvreHeist
     /// </summary>
     public partial class UCDemarrage : UserControl
     {
-        public UCDemarrage()
+        private MainWindow _mainWindow;
+        public UCDemarrage(MainWindow mainWindow)
         {
             InitializeComponent();
+            _mainWindow = mainWindow;
         }
 
         private void butStart_Click(object sender, RoutedEventArgs e)
         {
-
+            _mainWindow.AfficheUCTenue();
         }
     }
 }

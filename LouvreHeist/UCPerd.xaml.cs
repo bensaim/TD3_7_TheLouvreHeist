@@ -20,9 +20,16 @@ namespace LouvreHeist
     /// </summary>
     public partial class UCPerd : UserControl
     {
-        public UCPerd()
+        private MainWindow _mainWindow;
+        public UCPerd(MainWindow mainWindow)
         {
             InitializeComponent();
+            _mainWindow = mainWindow;
+        }
+
+        private void butRejouer_Click(object sender, RoutedEventArgs e)
+        {
+            _mainWindow.AfficheUCTenue();
         }
     }
 }
