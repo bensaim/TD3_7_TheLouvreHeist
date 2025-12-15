@@ -20,11 +20,31 @@ namespace LouvreHeist
     /// </summary>
     public partial class UCQuestion : UserControl
     {
-        public UCQuestion()
+        private MainWindow _mainWindow;
+        public UCQuestion(MainWindow mainWindow)
         {
             InitializeComponent();
+            _mainWindow = mainWindow;
+
             labQuestion.Content = MainWindow.QUESTIONS[MainWindow.indiceQuestions];
-            MainWindow.indiceDialogue++;
+           
+
+            butRep1.Content = MainWindow.REPONSES[MainWindow.indiceQuestions,MainWindow.indiceReponses];
+            MainWindow.indiceReponses++;
+            butRep2.Content = MainWindow.REPONSES[MainWindow.indiceQuestions,MainWindow.indiceReponses];
+            MainWindow.indiceReponses++;
+            butRep3.Content = MainWindow.REPONSES[MainWindow.indiceQuestions,MainWindow.indiceReponses];
+            MainWindow.indiceReponses++;
+            butRep4.Content = MainWindow.REPONSES[MainWindow.indiceQuestions,MainWindow.indiceReponses];
+            MainWindow.indiceReponses = 0;
+            MainWindow.indiceQuestions++;
+
+        }
+
+        private void butRep1_Click(object sender, RoutedEventArgs e)
+        {
+            _mainWindow.AfficheUCDialogue();
+
         }
     }
 }

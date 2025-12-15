@@ -21,15 +21,17 @@ namespace LouvreHeist
     public partial class UCDialogue : UserControl
     {
         private MainWindow _mainWindow;
+        int indiceD = MainWindow.indiceDialogue;
         public UCDialogue(MainWindow mainWindow)
         {
+ 
             InitializeComponent();
-            labDialoguePresentation.Content = MainWindow.DIALOGUE[MainWindow.indiceDialogue];
-            MainWindow.indiceDialogue++;
+            labDialoguePresentation.Content = MainWindow.DIALOGUE[MainWindow.indiceDialogue ];
             _mainWindow = mainWindow;
             butMdp.Content = MainWindow.BOUTONS[MainWindow.indiceBoutons];
             MainWindow.indiceBoutons++;
             butMdp.Visibility = Visibility.Hidden;
+            MainWindow.indiceDialogue = MainWindow.indiceDialogue + 2;
         }
 
 
@@ -41,8 +43,7 @@ namespace LouvreHeist
         private void UserControl_MouseDown(object sender, MouseButtonEventArgs e)
         {
             butMdp.Visibility = Visibility.Visible;
-            labDialoguePresentation.Content = MainWindow.DIALOGUE[2];
-            MainWindow.indiceDialogue++;
+            labDialoguePresentation.Content = MainWindow.DIALOGUE[indiceD + 1 ];
         }
     }
 }
