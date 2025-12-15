@@ -25,6 +25,8 @@ namespace LouvreHeist
         {
             InitializeComponent();
             _mainWindow = mainWindow;
+            string nomFichierImage = $"pack://application:,,,/images/cine{MainWindow.Cinematique}.png";
+            cine.ImageSource = new BitmapImage(new Uri(nomFichierImage));
         }
 
         private void UCCine_MouseDown(object sender, MouseButtonEventArgs e)
