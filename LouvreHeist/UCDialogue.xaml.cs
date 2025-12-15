@@ -24,9 +24,11 @@ namespace LouvreHeist
         public UCDialogue(MainWindow mainWindow)
         {
             InitializeComponent();
-            labDialoguePresentation.Content = MainWindow.texte[MainWindow.indiceDebutUCRue];
-            MainWindow.indiceDebutUCRue++;
+            labDialoguePresentation.Content = MainWindow.DIALOGUE[MainWindow.indiceDialogue];
+            MainWindow.indiceDialogue++;
             _mainWindow = mainWindow;
+            butMdp.Content = MainWindow.BOUTONS[MainWindow.indiceBoutons];
+            MainWindow.indiceBoutons++;
             butMdp.Visibility = Visibility.Hidden;
         }
 
@@ -38,8 +40,9 @@ namespace LouvreHeist
 
         private void UserControl_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            labDialoguePresentation.Content = "t'a bien le code des caméras ?";
             butMdp.Visibility = Visibility.Visible;
+            labDialoguePresentation.Content = MainWindow.DIALOGUE[3];
+            MainWindow.indiceDialogue++;
         }
     }
 }

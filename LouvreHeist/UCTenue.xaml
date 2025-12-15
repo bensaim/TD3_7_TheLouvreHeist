@@ -37,7 +37,7 @@
                 </TransformGroup>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <Label x:Name="labDialoguePresentation" Content="Choisi la tenue pour votre équipe afin de passer incognitos !" FontSize="20" FontFamily="Impact" Canvas.Left="150" Canvas.Top="30"/>
+        <Label x:Name="labDialoguePresentation" FontSize="20" FontFamily="Impact" Canvas.Left="150" Canvas.Top="30"/>
 
     </Canvas>
 </UserControl>
