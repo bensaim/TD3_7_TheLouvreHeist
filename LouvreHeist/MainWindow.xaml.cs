@@ -34,40 +34,46 @@ namespace LouvreHeist
         {
             InitializeComponent();
             UCDemarrage uc = new UCDemarrage();
+
+
             ZoneJeu.Content = uc;
             uc.butStart.Click += AfficheUCTenue;
+
+
         }
         public static string Perso { get; set; }
 
         private void AfficheUCTenue(object sender, RoutedEventArgs e)
+          {
+              UCTenue uc = new UCTenue();
+              ZoneJeu.Content = uc;
+              uc.butValiderTenue.Click += AfficheUCDate;
+          }
+
+          private void AfficheUCDate(object sender, RoutedEventArgs e)
+          {
+              UCDate uc = new UCDate(this);
+              ZoneJeu.Content = uc;
+
+          }
+         public void AfficheUCDialogue()
          {
-             UCTenue uc = new UCTenue();
+             UCDialogue uc = new UCDialogue(this);
              ZoneJeu.Content = uc;
-             uc.butValiderTenue.Click += AfficheUCDate;
          }
 
-         private void AfficheUCDate(object sender, RoutedEventArgs e)
+         public void AfficheUCQuestion()
          {
-             UCDate uc = new UCDate(this);
+             UCQuestion uc = new UCQuestion(this);
              ZoneJeu.Content = uc;
-
          }
-        public void AfficheUCDialogue()
-        {
-            UCDialogue uc = new UCDialogue(this);
-            ZoneJeu.Content = uc;
-        }
+         public void AfficheUCJeu()
+         {
+             UCJeu uc = new UCJeu();
+             ZoneJeu.Content = uc;
+         }
 
-        public void AfficheUCQuestion()
-        {
-            UCQuestion uc = new UCQuestion(this);
-            ZoneJeu.Content = uc;
-        }
-        public void AfficheUCJeu()
-        {
-            UCJeu uc = new UCJeu();
-            ZoneJeu.Content = uc;
-        }
+        
 
     }
 }
