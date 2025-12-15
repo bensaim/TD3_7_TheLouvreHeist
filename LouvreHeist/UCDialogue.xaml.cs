@@ -26,6 +26,8 @@ namespace LouvreHeist
         {
  
             InitializeComponent();
+            string nomFichierImage = $"pack://application:,,,/images/JustinDialogue{MainWindow.Perso}.png";
+            imgJustinDialogue.Source = new BitmapImage(new Uri(nomFichierImage));
             labDialoguePresentation.Content = MainWindow.DIALOGUE[MainWindow.indiceDialogue ];
             _mainWindow = mainWindow;
             butMdp.Content = MainWindow.BOUTONS[MainWindow.indiceBoutons];
