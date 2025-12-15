@@ -33,24 +33,21 @@ namespace LouvreHeist
         public MainWindow()
         {
             InitializeComponent();
-            UCDemarrage uc = new UCDemarrage();
-
-
+            UCDemarrage uc = new UCDemarrage(this);
             ZoneJeu.Content = uc;
-            uc.butStart.Click += AfficheUCTenue;
+
 
 
         }
         public static string Perso { get; set; }
 
-        private void AfficheUCTenue(object sender, RoutedEventArgs e)
+        public void AfficheUCTenue()
           {
-              UCTenue uc = new UCTenue();
+              UCTenue uc = new UCTenue(this);
               ZoneJeu.Content = uc;
-              uc.butValiderTenue.Click += AfficheUCDate;
           }
 
-          private void AfficheUCDate(object sender, RoutedEventArgs e)
+          public void AfficheUCDate()
           {
               UCDate uc = new UCDate(this);
               ZoneJeu.Content = uc;
@@ -75,7 +72,7 @@ namespace LouvreHeist
 
         public void AfficheUCPerd()
         {
-            UCPerd uc = new UCPerd();
+            UCPerd uc = new UCPerd(this);
             ZoneJeu.Content = uc;
         }
         public void AfficheUCGagner()

@@ -20,9 +20,11 @@ namespace LouvreHeist
     /// </summary>
     public partial class UCTenue : UserControl
     {
-        public UCTenue()
+        private MainWindow _mainWindow;
+        public UCTenue(MainWindow mainWindow)
         {
             InitializeComponent();
+            _mainWindow = mainWindow;
             labDialoguePresentation.Content = MainWindow.DIALOGUE[MainWindow.indiceDialogue];
             MainWindow.indiceDialogue++;
         }
@@ -30,7 +32,7 @@ namespace LouvreHeist
 
         private void butValiderTenue_Click(object sender, RoutedEventArgs e)
         {
-            
+            _mainWindow.AfficheUCDate();
         }
 
         private void tenue1_Click(object sender, RoutedEventArgs e)
