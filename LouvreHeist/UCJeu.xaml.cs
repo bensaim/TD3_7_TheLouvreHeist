@@ -15,11 +15,14 @@ namespace LouvreHeist
 
         private DispatcherTimer minuterie;
 
-        // Gestion du saut
-        private double vitesseSaut = 0;
-        private const double gravite = 3;
-        private const double impulsion = -40;
+        // Saut non parabolique
+        private bool enSaut = false;
         private double solY;
+        private double hauteurSaut = 180;
+        private double vitesseVerticale = 12;
+        private int tempsEnAir = 25;
+        private int compteurEnAir = 0;
+
 
         public UCJeu(MainWindow mainWindow )
         {
@@ -37,7 +40,7 @@ namespace LouvreHeist
         private void InitializeTimer()
         {
             minuterie = new DispatcherTimer();
-            minuterie.Interval = TimeSpan.FromMilliseconds(16); // ~62 FPS
+            minuterie.Interval = TimeSpan.FromMilliseconds(10); // ~62 FPS
             minuterie.Tick += Jeu;
             minuterie.Start();
         }
@@ -51,30 +54,60 @@ namespace LouvreHeist
             Deplace(imgSol2, pasSol);
             Deplace(imgPolicier, pasSol);
 
-            // Saut avec gravité
-            double newTop = Canvas.GetTop(imgJustinJeu) + vitesseSaut;
-            if (newTop < solY)
+            if (enSaut)
             {
-                Canvas.SetTop(imgJustinJeu, newTop);
-                vitesseSaut += gravite;
+                double top = Canvas.GetTop(imgJustinJeu);
+
+                // Monter
+                if (top > solY - hauteurSaut && compteurEnAir == 0)
+                {
+                    Canvas.SetTop(imgJustinJeu, top - vitesseVerticale);
+                }
+                // Pause en l’air
+                else if (compteurEnAir < tempsEnAir)
+                {
+                    compteurEnAir++;
+                }
+                // Descendre
+                else if (top < solY)
+                {
+                    Canvas.SetTop(imgJustinJeu, top + vitesseVerticale);
+                }
+                // Fin du saut
+                else
+                {
+                    Canvas.SetTop(imgJustinJeu, solY);
+                    enSaut = false;
+                    compteurEnAir = 0;
+                }
             }
-            else
-            {
-                Canvas.SetTop(imgJustinJeu, solY);
-                vitesseSaut = 0;
-            }
+
+
 
             // Collision
-            Rect rectJustin = new Rect(Canvas.GetLeft(imgJustinJeu)-20, Canvas.GetTop(imgJustinJeu)- 20,
-                                       imgJustinJeu.Width- 20, imgJustinJeu.Height - 20);
-            Rect rectPolicier = new Rect(Canvas.GetLeft(imgPolicier) - 20, Canvas.GetTop(imgPolicier) - 20,
-                                         imgPolicier.Width - 20, imgPolicier.Height - 20);
+            bool justinAuSol = Canvas.GetTop(imgJustinJeu) >= solY - 1;
 
-            if (rectJustin.IntersectsWith(rectPolicier))
+            if (justinAuSol)
             {
-                minuterie.Stop();
-                MessageBox.Show("Attrapé par le policier !");
+                Rect rectJustin = new Rect(
+                    Canvas.GetLeft(imgJustinJeu),
+                    Canvas.GetTop(imgJustinJeu),
+                    imgJustinJeu.Width,
+                    imgJustinJeu.Height);
+
+                Rect rectPolicier = new Rect(
+                    Canvas.GetLeft(imgPolicier),
+                    Canvas.GetTop(imgPolicier),
+                    imgPolicier.Width,
+                    imgPolicier.Height);
+
+                if (rectJustin.IntersectsWith(rectPolicier))
+                {
+                    minuterie.Stop();
+                    MessageBox.Show("Attrapé par le policier !");
+                }
             }
+
         }
 
         public void Deplace(Image image, int pas)
@@ -84,7 +117,7 @@ namespace LouvreHeist
                 Canvas.SetLeft(image, canvasJeu.ActualWidth);
         }
 
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        /*private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
             minuterie.Stop();
             ParametresWindow parametreWindow = new ParametresWindow();
@@ -99,16 +132,18 @@ namespace LouvreHeist
                 else if (vitesse == 2) { pasSol = 8; pasFond = 2; }
                 else if (vitesse == 3) { pasSol = 16; pasFond = 4; }
             }
-        }
-
-        
+        }*/
 
         private void CanvasJeu_SizeChanged(object sender, SizeChangedEventArgs e)
         {
+            
             double largeur = canvasJeu.ActualWidth;
             double hauteur = canvasJeu.ActualHeight;
             double hauteurSol = 109;
             double hauteurFond = hauteur - hauteurSol;
+            solY = hauteurFond - hauteurSol;
+            Canvas.SetTop(imgJustinJeu, solY);
+
 
             // Fond
             imgFond1.Width = largeur;
@@ -136,21 +171,21 @@ namespace LouvreHeist
             imgJustinJeu.Width = 200;
             imgJustinJeu.Height = 200;
             Canvas.SetLeft(imgJustinJeu, largeur * 0.1);
-            solY = hauteurFond - imgJustinJeu.Height;
+            solY = hauteurFond - hauteurSol;
             Canvas.SetTop(imgJustinJeu, solY);
 
             // Policier
-            imgPolicier.Width = 201;
-            imgPolicier.Height = 298;
+            imgPolicier.Width = 200;
+            imgPolicier.Height = 200;
             Canvas.SetLeft(imgPolicier, largeur * 0.6);
-            Canvas.SetTop(imgPolicier, hauteurFond - imgPolicier.Height);
+            Canvas.SetTop(imgPolicier, hauteurFond - hauteurSol);
         }
 
         private void canvasJeu_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            if (Canvas.GetTop(imgJustinJeu) >= solY)
+            if (!enSaut)
             {
-                vitesseSaut = impulsion; // impulsion vers le haut
+                enSaut = true;
             }
         }
     }
