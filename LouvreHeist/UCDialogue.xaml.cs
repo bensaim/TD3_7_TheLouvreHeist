@@ -34,6 +34,20 @@ namespace LouvreHeist
             MainWindow.indiceBoutons++;
             butSuite.Visibility = Visibility.Hidden;
             MainWindow.indiceDialogue = MainWindow.indiceDialogue + 2;
+            switch (MainWindow.indiceDialogue)
+            {
+                case 9:
+                    labNom.Content="???";
+                    break;
+
+                case 8:
+                    labNom.Content = "Medecin Oeuf-Homme";
+                    break;
+
+                default:
+                    labNom.Content = "Justin";
+                    break;
+            }
         }
 
 
@@ -56,5 +70,6 @@ namespace LouvreHeist
                 _mainWindow.AfficheUCQuestion();
 
         }
+        
     }
 }
