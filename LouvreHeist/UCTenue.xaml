@@ -22,7 +22,7 @@
             <Image Source="/images/panneau.png" Stretch="Fill" Width="150" Height="150"/>
         </RadioButton>
         
-        <Button x:Name="butValiderTenue" Content="VALIDER" Width="100" Height="100" Click="butValiderTenue_Click" IsEnabled="False"/>
+        <Button x:Name="butValiderTenue" Content="VALIDER" Width="100" Height="100" Click="butValiderTenue_Click" IsEnabled="False" Margin="0,40,0,0"/>
 
         <Viewbox Stretch="Uniform">
             <Rectangle x:Name="rectangleDialogue1" HorizontalAlignment="Center" Height="75" Stroke="White" VerticalAlignment="Top" Width="740" Fill="White" RenderTransformOrigin="0.5,0.5" RadiusX="23.601" RadiusY="23.601" Margin="0,0,0,350" >
@@ -33,5 +33,6 @@
         </Viewbox>
         <Label x:Name="labDialoguePresentation" FontSize="20" FontFamily="Impact" Margin="0,50,0,0" Width="500" Height="50" VerticalAlignment="Top"/>
 
+       
     </Grid>
 </UserControl>
