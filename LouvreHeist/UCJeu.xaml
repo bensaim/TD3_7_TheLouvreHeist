@@ -20,14 +20,14 @@
         <Image x:Name="imgFond2" Source="/images/courseLouvre.png"
            Stretch="Fill"
            
-           Canvas.Left="{Binding ActualWidth, ElementName=canvasJeu}" Canvas.Top="0"/>
+           Canvas.Left="{Binding ActualWidth, ElementName=canvasJeu}" Canvas.Top="0" Height="336" Width="800"/>
 
         <!-- Sol 1 -->
         <Image x:Name="imgSol1" Source="/images/bordureTrottoir.png"
            Stretch="Fill"
            
            Canvas.Top="341"
-           Canvas.Left="0"/>
+           Canvas.Left="0" Height="109" Width="800"/>
 
         <!-- Sol 2 -->
         <Image x:Name="imgSol2" Source="/images/bordureTrottoir.png"

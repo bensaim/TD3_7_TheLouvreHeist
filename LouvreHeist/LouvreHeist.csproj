@@ -12,7 +12,6 @@
     <None Remove="GameOver.png" />
     <None Remove="images\bordureTrottoir.png" />
     <None Remove="images\cine4.png" />
-    <None Remove="images\courseJustin.jpg" />
     <None Remove="images\courseLouvre.png" />
     <None Remove="images\demarrage.png" />
     <None Remove="images\diamant.png" />
@@ -55,7 +54,6 @@
   <ItemGroup>
     <Resource Include="images\bordureTrottoir.png" />
     <Resource Include="images\cine4.png" />
-    <Resource Include="images\courseJustin.jpg" />
     <Resource Include="images\courseLouvre.png" />
     <Resource Include="images\cine1.png" />
     <Resource Include="images\demarrage.png" />
