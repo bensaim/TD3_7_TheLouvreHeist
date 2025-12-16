@@ -22,5 +22,5 @@
             </Image.RenderTransform>
         </Image>
         <Label x:Name="desc" Content="Sauras-tu voler les bijoux de la couronne?" Canvas.Left="234" Canvas.Top="182" Foreground="White" FontFamily="Comic Sans MS" Height="86" Width="326" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" BorderThickness="10,10,10,10" FontSize="14"/>
-    </Canvas>
+    </Canvas> 
 </UserControl>
