@@ -27,15 +27,16 @@ namespace LouvreHeist
             _mainWindow = mainWindow;
 
             labQuestion.Content = MainWindow.QUESTIONS[MainWindow.indiceQuestions];
-           
 
-            butRep1.Content = MainWindow.REPONSES[MainWindow.indiceQuestions,MainWindow.indiceReponses];
-            MainWindow.indiceReponses++;
-            butRep2.Content = MainWindow.REPONSES[MainWindow.indiceQuestions,MainWindow.indiceReponses];
-            MainWindow.indiceReponses++;
-            butRep3.Content = MainWindow.REPONSES[MainWindow.indiceQuestions,MainWindow.indiceReponses];
-            MainWindow.indiceReponses++;
-            butRep4.Content = MainWindow.REPONSES[MainWindow.indiceQuestions,MainWindow.indiceReponses];
+
+            Button[] boutons = { butRep1, butRep2, butRep3, butRep4 };
+
+            for (int i = 0; i < boutons.Length; i++)
+            {
+                boutons[i].Content = MainWindow.REPONSES[MainWindow.indiceQuestions, MainWindow.indiceReponses];
+                MainWindow.indiceReponses++;
+            }
+
             MainWindow.indiceReponses = 0;
             MainWindow.indiceQuestions++;
 

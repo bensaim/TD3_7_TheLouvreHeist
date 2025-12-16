@@ -50,6 +50,11 @@ namespace LouvreHeist
             //if (MainWindow.indiceBoutons == MainWindow.BOUTONS.Length)
                 //_mainWindow.AfficheUCJeu();
             //else
+            if (MainWindow.indiceBoutons == 6)
+            {
+                _mainWindow.AfficheUCJeu();
+            }
+
                 _mainWindow.AfficheUCQuestion();
 
         }
