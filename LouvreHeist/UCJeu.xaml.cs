@@ -9,6 +9,7 @@ namespace LouvreHeist
 {
     public partial class UCJeu : UserControl
     {
+        private MainWindow _mainWindow;
         private static int pasSol = 8;
         private static int pasFond = 2;
         public static int vitesse = 2;
@@ -28,7 +29,7 @@ namespace LouvreHeist
         {
             InitializeComponent();
             InitializeTimer();
-
+            _mainWindow = mainWindow;
             // Image du personnage
             string nomFichierImage = $"pack://application:,,,/images/JustinJeu{MainWindow.Perso}.png";
             imgJustinJeu.Source = new BitmapImage(new Uri(nomFichierImage));
