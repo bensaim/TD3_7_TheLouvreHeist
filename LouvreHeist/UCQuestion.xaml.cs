@@ -27,15 +27,16 @@ namespace LouvreHeist
             _mainWindow = mainWindow;
 
             labQuestion.Content = MainWindow.QUESTIONS[MainWindow.indiceQuestions];
-           
 
-            butRep1.Content = MainWindow.REPONSES[MainWindow.indiceQuestions,MainWindow.indiceReponses];
-            MainWindow.indiceReponses++;
-            butRep2.Content = MainWindow.REPONSES[MainWindow.indiceQuestions,MainWindow.indiceReponses];
-            MainWindow.indiceReponses++;
-            butRep3.Content = MainWindow.REPONSES[MainWindow.indiceQuestions,MainWindow.indiceReponses];
-            MainWindow.indiceReponses++;
-            butRep4.Content = MainWindow.REPONSES[MainWindow.indiceQuestions,MainWindow.indiceReponses];
+
+            Button[] boutons = { butRep1, butRep2, butRep3, butRep4 };
+
+            for (int i = 0; i < boutons.Length; i++)
+            {
+                boutons[i].Content = MainWindow.REPONSES[MainWindow.indiceQuestions, MainWindow.indiceReponses];
+                MainWindow.indiceReponses++;
+            }
+
             MainWindow.indiceReponses = 0;
             MainWindow.indiceQuestions++;
 
@@ -44,25 +45,6 @@ namespace LouvreHeist
         private void butRep1_Click(object sender, RoutedEventArgs e)
         {
             if (1 == MainWindow.BONNEREP[MainWindow.indiceQuestions - 1, 0])
-                    if (MainWindow.indiceQuestions == 3)
-                    {
-                        MainWindow.Cinematique = 2;
-                        _mainWindow.AfficheUCCinematique();
-                    }
-                    else if (MainWindow.indiceQuestions == 6)
-                    {
-                    MainWindow.Cinematique = 3;
-                    _mainWindow.AfficheUCCinematique();
-                    }
-                    else
-                    _mainWindow.AfficheUCDialogue();
-            else
-                _mainWindow.AfficheUCPerd();
-        }
-
-        private void butRep2_Click(object sender, RoutedEventArgs e)
-        {
-            if (2 == MainWindow.BONNEREP[MainWindow.indiceQuestions - 1, 0])
                 if (MainWindow.indiceQuestions == 3)
                 {
                     MainWindow.Cinematique = 2;
@@ -79,42 +61,43 @@ namespace LouvreHeist
                 _mainWindow.AfficheUCPerd();
         }
 
-        private void butRep3_Click(object sender, RoutedEventArgs e)
+        private void butRep_Click(object sender, RoutedEventArgs e)
         {
-            if (3 == MainWindow.BONNEREP[MainWindow.indiceQuestions - 1, 0])
-                if (MainWindow.indiceQuestions == 3)
-                {
-                    MainWindow.Cinematique = 2;
-                    _mainWindow.AfficheUCCinematique();
-                }
-                else if (MainWindow.indiceQuestions == 6)
-                {
-                    MainWindow.Cinematique = 3;
-                    _mainWindow.AfficheUCCinematique();
-                }
-                else
-                    _mainWindow.AfficheUCDialogue();
-            else
-                _mainWindow.AfficheUCPerd();
+            if (sender is not Button button)
+                return;
+
+            int reponseChoisie = int.Parse(button.Tag.ToString());
+            TraiterReponse(reponseChoisie);
         }
 
-        private void butRep4_Click(object sender, RoutedEventArgs e)
+        private void TraiterReponse(int reponseChoisie)
         {
-            if (4 == MainWindow.BONNEREP[MainWindow.indiceQuestions - 1, 0])
-                if (MainWindow.indiceQuestions == 3)
-                {
+            int bonneRep = MainWindow.BONNEREP[MainWindow.indiceQuestions - 1, 0];
+
+            if (reponseChoisie != bonneRep)
+            {
+                _mainWindow.AfficheUCPerd();
+                return;
+            }
+
+            switch (MainWindow.indiceQuestions)
+            {
+                case 3:
                     MainWindow.Cinematique = 2;
                     _mainWindow.AfficheUCCinematique();
-                }
-                else if (MainWindow.indiceQuestions == 6)
-                {
+                    break;
+
+                case 6:
                     MainWindow.Cinematique = 3;
                     _mainWindow.AfficheUCCinematique();
-                }
-                else
+                    break;
+
+                default:
                     _mainWindow.AfficheUCDialogue();
-            else
-                _mainWindow.AfficheUCPerd();
+                    break;
+            }
         }
+
+    
     }
 }

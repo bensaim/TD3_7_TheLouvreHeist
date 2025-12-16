@@ -31,7 +31,11 @@ namespace LouvreHeist
 
         private void UCCine_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            _mainWindow.AfficheUCDialogue();
+            if (MainWindow.Cinematique != 4)
+                _mainWindow.AfficheUCDialogue();
+            else
+                _mainWindow.AfficheUCJeu();
+
         }
     }
 }

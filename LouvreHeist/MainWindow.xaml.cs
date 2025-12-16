@@ -34,7 +34,7 @@ namespace LouvreHeist
         {
             InitializeComponent();
             WindowState = WindowState.Maximized;
-            UCJeu uc = new UCJeu(this);
+            UCDemarrage uc = new UCDemarrage(this);
             ZoneJeu.Content = uc;
 
 
@@ -63,11 +63,11 @@ namespace LouvreHeist
              UCQuestion uc = new UCQuestion(this);
              ZoneJeu.Content = uc;
          }
-         /*public void AfficheUCJeu()
+         public void AfficheUCJeu()
          {
-             UCJeu uc = new UCJeu();
+             UCJeu uc = new UCJeu(this);
              ZoneJeu.Content = uc;
-         }*/
+         }
 
         public void AfficheUCPerd()
         {
