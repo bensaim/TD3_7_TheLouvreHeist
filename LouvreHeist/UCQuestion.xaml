@@ -17,10 +17,10 @@
         </Rectangle>
 
         <Label x:Name="labQuestion" Canvas.Left="338" Canvas.Top="46" VerticalAlignment="Center"/>
-        <Button x:Name="butRep1" Content="Button"  Canvas.Left="128" Canvas.Top="165" Click="butRep1_Click"/>
-        <Button x:Name="butRep2" Content="Button"  Canvas.Left="596" Canvas.Top="165" Click="butRep2_Click"/>
-        <Button x:Name="butRep3" Content="Button"  Canvas.Left="128" Canvas.Top="330" Click="butRep3_Click"/>
-        <Button x:Name="butRep4" Content="Button"  Canvas.Left="596" Canvas.Top="330" Click="butRep4_Click"/>
+        <Button x:Name="butRep1" Content="" Tag="1" Canvas.Left="128" Canvas.Top="165" Click="butRep_Click"/>
+        <Button x:Name="butRep2" Content="" Tag="2" Canvas.Left="596" Canvas.Top="165" Click="butRep_Click"/>
+        <Button x:Name="butRep3" Content="" Tag="3" Canvas.Left="128" Canvas.Top="330" Click="butRep_Click"/>
+        <Button x:Name="butRep4" Content="" Tag="4" Canvas.Left="596" Canvas.Top="330" Click="butRep_Click"/>
 
 
     </Canvas>

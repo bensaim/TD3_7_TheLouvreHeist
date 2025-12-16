@@ -47,14 +47,12 @@ namespace LouvreHeist
 
         private void butSuite_Click(object sender, RoutedEventArgs e)
         {
-            //if (MainWindow.indiceBoutons == MainWindow.BOUTONS.Length)
-                //_mainWindow.AfficheUCJeu();
-            //else
-            if (MainWindow.indiceBoutons == 6)
+            if (MainWindow.indiceBoutons == MainWindow.BOUTONS.Length)
             {
-                _mainWindow.AfficheUCJeu();
+                MainWindow.Cinematique = 4;
+                _mainWindow.AfficheUCCinematique();
             }
-
+            else
                 _mainWindow.AfficheUCQuestion();
 
         }
