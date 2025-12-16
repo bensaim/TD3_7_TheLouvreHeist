@@ -106,6 +106,7 @@ namespace LouvreHeist
                 {
                     minuterie.Stop();
                     MessageBox.Show("Attrapé par le policier !");
+                    _mainWindow.AfficheUCJeu();
                 }
             }
 
