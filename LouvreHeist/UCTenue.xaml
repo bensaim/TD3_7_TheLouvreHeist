@@ -6,38 +6,32 @@
              xmlns:local="clr-namespace:LouvreHeist"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Canvas>
-        <RadioButton x:Name="tenue1" Canvas.Left="170" Canvas.Top="140" Click="tenue1_Click" >
-            <Image Height="100" Source="/images/tutu.jpg"  Width="100"/>
+    <Grid>
+        <RadioButton x:Name="tenue1" Margin="100, 0, 0, 50" Click="tenue1_Click" Width="170" Height="150" HorizontalAlignment="Left"> 
+            <Image Height="150" Source="/images/tutu.jpg"  Width="170" />
         </RadioButton>
-        <RadioButton x:Name="tenue2" Canvas.Left="540" Canvas.Top="140" Click="tenue2_Click">
-            <Image Height="100" Source="/images/tenueworker.jpg" Width="100"/>
+        <RadioButton x:Name="tenue2" Margin = "0, 0, 100, 50" Click="tenue2_Click" Width="170" Height="150" HorizontalAlignment="Right">
+            <Image Height="150" Source="/images/tenueworker.jpg" Width="170"/>
+        </RadioButton>
+
+        <RadioButton x:Name="tenue3" Margin =" 100, 294, 50, 0" Click="tenue3_Click" Width="170" Height="150" HorizontalAlignment="Left"> 
+            <Image Height="150" Source="/images/emo.png" Stretch="Fill" Width="170"/>
+        </RadioButton>
+
+        <RadioButton x:Name="tenue4" Margin= "0, 294, 100, 0" Click="tenue4_Click" Width="170" Height="150" HorizontalAlignment="Right"> 
+            <Image Source="/images/panneau.png" Stretch="Fill" Width="150" Height="150"/>
         </RadioButton>
         
-        <RadioButton x:Name="tenue3" Canvas.Left="170" Canvas.Top="294" Click="tenue3_Click">
-            <Image Height="100" Source="/images/emo.png" Stretch="Fill" Width="100"/>
-        </RadioButton>
-        
-        <RadioButton x:Name="tenue4" Canvas.Left="540" Canvas.Top="294" Click="tenue4_Click">
-            <Image Source="/images/panneau.png" Stretch="Fill" Width="100" Height="100"/>
-        </RadioButton>
-        
-        <Button x:Name="butValiderTenue" Content="VALIDER" Canvas.Left="380" Canvas.Top="251" Click="butValiderTenue_Click" IsEnabled="False"/>
+        <Button x:Name="butValiderTenue" Content="VALIDER" Width="100" Height="100" Click="butValiderTenue_Click" IsEnabled="False"/>
 
+        <Viewbox Stretch="Uniform">
+            <Rectangle x:Name="rectangleDialogue1" HorizontalAlignment="Center" Height="75" Stroke="White" VerticalAlignment="Top" Width="740" Fill="White" RenderTransformOrigin="0.5,0.5" RadiusX="23.601" RadiusY="23.601" Margin="0,0,0,350" >
+                <Rectangle.Effect>
+                    <DropShadowEffect/>
+                </Rectangle.Effect>
+            </Rectangle>
+        </Viewbox>
+        <Label x:Name="labDialoguePresentation" FontSize="20" FontFamily="Impact" Margin="0,50,0,0" Width="500" Height="50" VerticalAlignment="Top"/>
 
-        <Rectangle x:Name="rectangleDialogue1" HorizontalAlignment="Left" Height="75" Stroke="White" VerticalAlignment="Top" Width="740" Fill="White" RenderTransformOrigin="0.5,0.5" RadiusX="23.601" RadiusY="23.601" Canvas.Left="34" Canvas.Top="10" >
-            <Rectangle.Effect>
-                <DropShadowEffect/>
-            </Rectangle.Effect>
-            <Rectangle.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Rectangle.RenderTransform>
-        </Rectangle>
-        <Label x:Name="labDialoguePresentation" FontSize="20" FontFamily="Impact" Canvas.Left="150" Canvas.Top="30"/>
-
-    </Canvas>
+    </Grid>
 </UserControl>

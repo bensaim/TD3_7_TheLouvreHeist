@@ -10,8 +10,8 @@
         <Grid.Background>
             <ImageBrush ImageSource="/images/Gagner.png"/>
         </Grid.Background>
-        <Button x:Name="butQuitter" Content="Quitter" HorizontalAlignment="Left" Margin="400,330,0,0" VerticalAlignment="Top" Height="38" Width="76" Click="butQuitter_Click"/>
-
+        <Button x:Name="butQuitter" Content="Quitter" HorizontalAlignment="Left" Margin="669,225,0,0" VerticalAlignment="Top" Height="38" Width="76" Click="butQuitter_Click"/>
+        <Button x:Name="butRejouer" Content="Rejouer" HorizontalAlignment="Left" Margin="119,225,0,0" VerticalAlignment="Top" Height="38" Width="76" Click="butRejouer_Click"/>
 
     </Grid>
 </UserControl>

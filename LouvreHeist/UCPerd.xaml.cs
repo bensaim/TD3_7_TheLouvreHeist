@@ -33,6 +33,7 @@ namespace LouvreHeist
             MainWindow.indiceBoutons = 0;
             MainWindow.indiceQuestions = 0;
             MainWindow.indiceReponses = 0;
+            MainWindow.Cinematique = 1;
             _mainWindow.AfficheUCTenue();
         }
 

@@ -76,7 +76,7 @@ namespace LouvreHeist
         }
         public void AfficheUCGagner()
         {
-            UCGagner uc = new UCGagner();
+            UCGagner uc = new UCGagner(this);
             ZoneJeu.Content = uc;
         }
 

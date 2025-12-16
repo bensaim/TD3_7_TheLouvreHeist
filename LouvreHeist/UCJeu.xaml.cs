@@ -134,6 +134,7 @@ namespace LouvreHeist
                 if (rectJustin.IntersectsWith(rectPolicier))
                 {
                     minuterie.Stop();
+                    _timer.Stop();
                     MessageBox.Show("Attrapé par le policier !");
                     _mainWindow.AfficheUCJeu();
                 }
@@ -218,6 +219,11 @@ namespace LouvreHeist
             {
                 enSaut = true;
             }
+        }
+
+        private void butFin_Click(object sender, RoutedEventArgs e)
+        {
+            _mainWindow.AfficheUCGagner();
         }
     }
 }
