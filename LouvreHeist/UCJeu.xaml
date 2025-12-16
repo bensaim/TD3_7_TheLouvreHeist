@@ -49,6 +49,9 @@
            Width="200" Height="215"
            Canvas.Left="86" Canvas.Top="225" HorizontalAlignment="Center" VerticalAlignment="Top"
            />
+        <Label x:Name="timer" Content="10" Canvas.Left="360" Canvas.Top="49" Height="90" Width="74" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="48" Foreground="Red" FontWeight="Bold"/>
+        <Button x:Name="butFin" Content="S'ECHAPPER" Canvas.Left="350" Canvas.Top="144" Height="44" Width="100" Visibility="Hidden"/>
+        <Label x:Name="labFeliz" Content="FELICITATION TU T'ES ECHAPPE" Canvas.Left="131" Canvas.Top="225" Foreground="Red" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Comic Sans MS" Width="538" Visibility="Hidden"/>
     </Canvas>
 
 </UserControl>

@@ -15,6 +15,8 @@ namespace LouvreHeist
         public static int vitesse = 2;
 
         private DispatcherTimer minuterie;
+        private DispatcherTimer _timer;
+        int _tempsRestant = 8; //ref au vrai heist (8 minutes)
 
         // Saut non parabolique
         private bool enSaut = false;
@@ -36,6 +38,8 @@ namespace LouvreHeist
 
             // Abonnement à SizeChanged (une seule fois)
             canvasJeu.SizeChanged += CanvasJeu_SizeChanged;
+
+            
         }
 
         private void InitializeTimer()
@@ -44,6 +48,31 @@ namespace LouvreHeist
             minuterie.Interval = TimeSpan.FromMilliseconds(10); // ~62 FPS
             minuterie.Tick += Jeu;
             minuterie.Start();
+
+            _timer = new DispatcherTimer();
+            _timer.Interval = TimeSpan.FromSeconds(1); // Déclenchement toutes les secondes
+            _timer.Tick += Timer_Tick;
+            _timer.Start();
+
+        }
+
+        private void Timer_Tick(object? sender, EventArgs e)
+        {
+            _tempsRestant--;
+
+            if (_tempsRestant > 0)
+            {
+                timer.Content = _tempsRestant.ToString();
+            }
+            else
+            {
+                minuterie.Stop();
+                _timer.Stop();
+                timer.Content = "FELICITATION TU T'ES ECHAPPER!!!!";
+                timer.Visibility = Visibility.Hidden;
+                labFeliz.Visibility = Visibility.Visible;
+                butFin.Visibility = Visibility.Visible;
+            }
         }
 
         private void Jeu(object? sender, EventArgs e)
