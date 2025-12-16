@@ -30,8 +30,8 @@ namespace LouvreHeist
             InitializeTimer();
 
             // Image du personnage
-            //string nomFichierImage = $"pack://application:,,,/images/JustinJeu{MainWindow.Perso}.png";
-            //imgJustinJeu.Source = new BitmapImage(new Uri(nomFichierImage));
+            string nomFichierImage = $"pack://application:,,,/images/JustinJeu{MainWindow.Perso}.png";
+            imgJustinJeu.Source = new BitmapImage(new Uri(nomFichierImage));
 
             // Abonnement à SizeChanged (une seule fois)
             canvasJeu.SizeChanged += CanvasJeu_SizeChanged;
