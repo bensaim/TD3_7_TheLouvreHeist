@@ -20,14 +20,26 @@ namespace LouvreHeist
     /// </summary>
     public partial class UCGagner : UserControl
     {
-        public UCGagner()
+        private MainWindow _mainWindow;
+        public UCGagner(MainWindow mainWindow)
         {
             InitializeComponent();
+            _mainWindow = mainWindow;
         }
 
         private void butQuitter_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void butRejouer_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow.indiceDialogue = 0;
+            MainWindow.indiceBoutons = 0;
+            MainWindow.indiceQuestions = 0;
+            MainWindow.indiceReponses = 0;
+            MainWindow.Cinematique = 1;
+            _mainWindow.AfficheUCTenue();
         }
     }
 }

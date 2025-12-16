@@ -6,22 +6,23 @@
              xmlns:local="clr-namespace:LouvreHeist"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Canvas>
+    <Grid>
+
+        <Viewbox Stretch="Uniform">
+            <Rectangle x:Name="rectangleDialogue1"  Height="75" Stroke="White" VerticalAlignment="Top" Width="804" Fill="White"  RadiusX="23.601" RadiusY="23.601"  HorizontalAlignment="Center" Margin="0,0,0,350" >
+                <Rectangle.Effect>
+                    <DropShadowEffect/>
+                </Rectangle.Effect>
+
+            </Rectangle>
+        </Viewbox>
+
+        <Label x:Name="labQuestion"  VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,50,0,0"/>
+        <Button x:Name="butRep1" Content="" Tag="1" Click="butRep_Click"  Margin="145,130,485,270" Width="100" Height="50"/>
+        <Button x:Name="butRep2" Content="" Tag="2" Click="butRep_Click"  Margin="485,130,145,270" Width="100" Height="50"/>
+        <Button x:Name="butRep3" Content="" Tag="3" Click="butRep_Click"  Margin="145,300,485,90" Width="100" Height="50"/> 
+        <Button x:Name="butRep4" Content="" Tag="4" Click="butRep_Click"  Margin="485,300,145,90" Width="100" Height="50"/>
 
 
-        <Rectangle x:Name="rectangleDialogue1"  Height="75" Stroke="White" VerticalAlignment="Top" Width="740" Fill="White"  RadiusX="23.601" RadiusY="23.601" Canvas.Left="23" Canvas.Top="21" HorizontalAlignment="Center" >
-            <Rectangle.Effect>
-                <DropShadowEffect/>
-            </Rectangle.Effect>
-
-        </Rectangle>
-
-        <Label x:Name="labQuestion" Canvas.Left="338" Canvas.Top="46" VerticalAlignment="Center"/>
-        <Button x:Name="butRep1" Content="" Tag="1" Canvas.Left="128" Canvas.Top="165" Click="butRep_Click"/>
-        <Button x:Name="butRep2" Content="" Tag="2" Canvas.Left="596" Canvas.Top="165" Click="butRep_Click"/>
-        <Button x:Name="butRep3" Content="" Tag="3" Canvas.Left="128" Canvas.Top="330" Click="butRep_Click"/>
-        <Button x:Name="butRep4" Content="" Tag="4" Canvas.Left="596" Canvas.Top="330" Click="butRep_Click"/>
-
-
-    </Canvas>
+    </Grid>
 </UserControl>
