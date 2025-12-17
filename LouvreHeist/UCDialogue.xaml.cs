@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace LouvreHeist
 {
@@ -24,24 +25,55 @@ namespace LouvreHeist
         int indiceD = MainWindow.indiceDialogue;
         public UCDialogue(MainWindow mainWindow)
         {
- 
+            
             InitializeComponent();
             string nomFichierImage = $"pack://application:,,,/images/JustinDialogue{MainWindow.Perso}.png";
             imgJustinDialogue.Source = new BitmapImage(new Uri(nomFichierImage));
-
+            string mechant = $"pack://application:,,,/images/oeufHomme{MainWindow.indiceOeuf}.png";
+            string fond = $"pack://application:,,,/images/fond{MainWindow.indiceFond}.png";
             switch (MainWindow.indiceDialogue)
             {
+                case 1:
+                    MainWindow.indiceFond++;
+                    imgFond.Source = new BitmapImage(new Uri(fond));
+                    break;
+                case 3:
+                    MainWindow.indiceFond++;
+                    imgFond.Source = new BitmapImage(new Uri(fond));
+                    break;
+                case 5:
+                    MainWindow.indiceFond++;
+                    imgFond.Source = new BitmapImage(new Uri(fond));
+                    break;
                 case 7:
                     labNom.Content = "???";
+                    imgJustinDialogue.Source = new BitmapImage(new Uri(mechant));
+                    MainWindow.indiceOeuf++;
+                    
+                    imgFond.Source = new BitmapImage(new Uri(fond));
                     break;
                 case 9:
                     labNom.Content = "Medecin Oeuf-Homme";
+                    imgJustinDialogue.Source = new BitmapImage(new Uri(mechant));
+                    MainWindow.indiceOeuf++;
+                    imgFond.Source = new BitmapImage(new Uri(fond));
                     break;
                 case 11:
                     labNom.Content = "Medecin Oeuf-Homme";
+                    imgJustinDialogue.Source = new BitmapImage(new Uri(mechant));
+                    MainWindow.indiceOeuf++;
+                    imgFond.Source = new BitmapImage(new Uri(fond));
+                    break;
+                case 13:
+                    labNom.Content = "Justin";
+                    imgJustinDialogue.Source = new BitmapImage(new Uri(mechant));
+                    imgFond.Source = new BitmapImage(new Uri(fond));
+                    MainWindow.indiceOeuf++;
                     break;
                 default:
                     labNom.Content = "Justin";
+                    imgJustinDialogue.Source = new BitmapImage(new Uri(nomFichierImage));
+                    imgFond.Source = new BitmapImage(new Uri(fond));
                     break;
             }
             labDialoguePresentation.Content = MainWindow.DIALOGUE[MainWindow.indiceDialogue ];
@@ -64,10 +96,12 @@ namespace LouvreHeist
             if (indiceD + 1 == 10 || indiceD + 1 == 12)
             {
                 labNom.Content = "Medecin Oeuf-Homme";
+
             }
-            else if (indiceD + 1 == 8)
+            else if (indiceD + 1 == 8 || indiceD + 1 == 14)
             {
                 labNom.Content = "Justin";
+
             }
            }
 

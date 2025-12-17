@@ -39,7 +39,9 @@ namespace LouvreHeist
             MainWindow.indiceQuestions = 0;
             MainWindow.indiceReponses = 0;
             MainWindow.Cinematique = 1;
-            _mainWindow.AfficheUCTenue();
+            MainWindow.indiceOeuf = 1;
+            MainWindow.indiceFond = 1;
+        _mainWindow.AfficheUCTenue();
         }
     }
 }
