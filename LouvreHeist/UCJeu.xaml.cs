@@ -36,7 +36,6 @@ namespace LouvreHeist
             string nomFichierImage = $"pack://application:,,,/images/JustinJeu{MainWindow.Perso}.png";
             imgJustinJeu.Source = new BitmapImage(new Uri(nomFichierImage));
 
-            // Abonnement à SizeChanged (une seule fois)
             canvasJeu.SizeChanged += CanvasJeu_SizeChanged;
 
             
@@ -58,20 +57,20 @@ namespace LouvreHeist
 
         private void Timer_Tick(object? sender, EventArgs e)
         {
-            _tempsRestant--;
+            _tempsRestant--; // Décrémente le temps restant de 1 seconde 
 
             if (_tempsRestant > 0)
             {
-                timer.Content = _tempsRestant.ToString();
+                timer.Content = _tempsRestant.ToString(); // Met à jour l'affichage du temps restant
             }
             else
             {
-                minuterie.Stop();
+                minuterie.Stop(); //quand on a réussi on stop la minuterie et le timer du jeu
                 _timer.Stop();
                 timer.Content = "FELICITATION TU T'ES ECHAPPER!!!!";
-                timer.Visibility = Visibility.Hidden;
-                labFeliz.Visibility = Visibility.Visible;
-                butFin.Visibility = Visibility.Visible;
+                timer.Visibility = Visibility.Hidden; // On cache le timer
+                labFelicitation.Visibility = Visibility.Visible; // On affiche le message de félicitation
+                butFin.Visibility = Visibility.Visible; //On affiche le bouton rejouer
             }
         }
 
@@ -86,27 +85,27 @@ namespace LouvreHeist
 
             if (enSaut)
             {
-                double top = Canvas.GetTop(imgJustinJeu);
+                double top = Canvas.GetTop(imgJustinJeu); // Position verticale actuelle de Justin
 
                 // Monter
-                if (top > solY - hauteurSaut && compteurEnAir == 0)
+                if (top > solY - hauteurSaut && compteurEnAir == 0) // Tant qu'on n'a pas atteint la hauteur maximale du saut
                 {
-                    Canvas.SetTop(imgJustinJeu, top - vitesseVerticale);
+                    Canvas.SetTop(imgJustinJeu, top - vitesseVerticale); // Déplacer Justin vers le haut
                 }
                 // Pause en l’air
-                else if (compteurEnAir < tempsEnAir)
+                else if (compteurEnAir < tempsEnAir) //on incrémente le compteur jusqu'à amorcer la descente en atteignant tempsEnAir
                 {
                     compteurEnAir++;
                 }
                 // Descendre
-                else if (top < solY)
+                else if (top < solY) // Tant qu'on n'est pas encore au sol
                 {
-                    Canvas.SetTop(imgJustinJeu, top + vitesseVerticale);
+                    Canvas.SetTop(imgJustinJeu, top + vitesseVerticale); // Déplacer Justin vers le bas
                 }
                 // Fin du saut
                 else
                 {
-                    Canvas.SetTop(imgJustinJeu, solY);
+                    Canvas.SetTop(imgJustinJeu, solY); // S'assurer que Justin est bien au sol 
                     enSaut = false;
                     compteurEnAir = 0;
                 }
@@ -115,66 +114,51 @@ namespace LouvreHeist
 
 
             // Collision
-            bool justinAuSol = Canvas.GetTop(imgJustinJeu) >= solY - 1;
+            bool justinAuSol = Canvas.GetTop(imgJustinJeu) >= solY - 1; // Vérifie si Justin est au sol
 
-            if (justinAuSol)
+            if (justinAuSol) // La collision n'est vérifiée que si Justin est au sol
             {
-                Rect rectJustin = new Rect(
+                Rect rectJustin = new Rect( 
                     Canvas.GetLeft(imgJustinJeu),
                     Canvas.GetTop(imgJustinJeu),
                     imgJustinJeu.Width,
-                    imgJustinJeu.Height);
+                    imgJustinJeu.Height); // Rectangle englobant Justin
 
                 Rect rectPolicier = new Rect(
                     Canvas.GetLeft(imgPolicier),
                     Canvas.GetTop(imgPolicier),
                     imgPolicier.Width,
-                    imgPolicier.Height);
+                    imgPolicier.Height); // Rectangle englobant le policier
 
-                if (rectJustin.IntersectsWith(rectPolicier))
+                if (rectJustin.IntersectsWith(rectPolicier)) //si y'a collision entre les deux rectangles c'est perdu
                 {
                     minuterie.Stop();
                     _timer.Stop();
                     MessageBox.Show("Attrapé par le policier !");
-                    _mainWindow.AfficheUCJeu();
+                    _mainWindow.AfficheUCJeu(); //on revient au début du jeu avec timer et minuterie réinitialisés
                 }
             }
 
         }
 
-        public void Deplace(Image image, int pas)
+        public void Deplace(Image image, int pas) //deplacer le decor
         {
             Canvas.SetLeft(image, Canvas.GetLeft(image) - pas);
             if (Canvas.GetLeft(image) + image.ActualWidth <= 0)
                 Canvas.SetLeft(image, canvasJeu.ActualWidth);
         }
 
-        /*private void MenuItem_Click(object sender, RoutedEventArgs e)
-        {
-            minuterie.Stop();
-            ParametresWindow parametreWindow = new ParametresWindow();
-            bool? rep = parametreWindow.ShowDialog();
+        
 
-            if (rep == true)
-            {
-                minuterie.Start();
-                vitesse = (int)parametreWindow.slidVitesse.Value;
-
-                if (vitesse == 1) { pasSol = 4; pasFond = 1; }
-                else if (vitesse == 2) { pasSol = 8; pasFond = 2; }
-                else if (vitesse == 3) { pasSol = 16; pasFond = 4; }
-            }
-        }*/
-
-        private void CanvasJeu_SizeChanged(object sender, SizeChangedEventArgs e)
+        private void CanvasJeu_SizeChanged(object sender, SizeChangedEventArgs e) //redimensionner les éléments du jeu en fonction de la taille de la fenêtre
         {
             
-            double largeur = canvasJeu.ActualWidth;
-            double hauteur = canvasJeu.ActualHeight;
+            double largeur = canvasJeu.ActualWidth; //largeur de la fenêtre
+            double hauteur = canvasJeu.ActualHeight; //hauteur de la fenêtre
             double hauteurSol = 109;
             double hauteurFond = hauteur - hauteurSol;
-            solY = hauteurFond - hauteurSol;
-            Canvas.SetTop(imgJustinJeu, solY);
+            solY = hauteurFond - hauteurSol; //position Y du sol pour le déplacement des persos (on enlève la hauteur du fond qui fait tout la fenêtre moins la hauteur du sol)
+            Canvas.SetTop(imgJustinJeu, solY); //on repositionne Justin au sol lors du redimensionnement
 
 
             // Fond
@@ -202,26 +186,26 @@ namespace LouvreHeist
             // Justin
             imgJustinJeu.Width = 200;
             imgJustinJeu.Height = 200;
-            Canvas.SetLeft(imgJustinJeu, largeur * 0.1);
+            Canvas.SetLeft(imgJustinJeu, largeur*0.1); //redimensionnement (jusitn carré de base 200x200)
             solY = hauteurFond - hauteurSol;
             Canvas.SetTop(imgJustinJeu, solY);
 
             // Policier
             imgPolicier.Width = 200;
             imgPolicier.Height = 200;
-            Canvas.SetLeft(imgPolicier, largeur * 0.6);
+            Canvas.SetLeft(imgPolicier, largeur *0.6); //redimensionnement (policier rectangle fin de base)
             Canvas.SetTop(imgPolicier, hauteurFond - hauteurSol);
         }
 
         private void canvasJeu_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            if (!enSaut)
+            if (!enSaut) // Si Justin n'est pas déjà en train de sauter
             {
                 enSaut = true;
             }
         }
 
-        private void butFin_Click(object sender, RoutedEventArgs e)
+        private void butFin_Click(object sender, RoutedEventArgs e) //affiche cinematique de fin
         {
             _mainWindow.AfficheUCGagner();
         }
