@@ -35,6 +35,7 @@ namespace LouvreHeist
         public MainWindow()
         {
             InitializeComponent();
+            InitMusique();
             WindowState = WindowState.Maximized;
             UCDemarrage uc = new UCDemarrage(this);
             ZoneJeu.Content = uc;
@@ -84,9 +85,14 @@ namespace LouvreHeist
         private void InitMusique()
         {
             musique = new MediaPlayer();
-            musique.Open(new Uri(AppDomain.CurrentDomain.BaseDirectory + "sons/musiqueFond.mp3"));
+            musique.Open(new Uri(AppDomain.CurrentDomain.BaseDirectory + "sons/MusiqueFond.mp3"));
             musique.MediaEnded += RelanceMusique;
-            musique.Volume = 0.5;
+            musique.Volume = 1;
+            musique.Play();
+        }
+        private void RelanceMusique(object? sender, EventArgs e)
+        {
+            musique.Position = TimeSpan.Zero;
             musique.Play();
         }
     }

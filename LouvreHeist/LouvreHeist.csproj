@@ -83,4 +83,10 @@
     <Resource Include="images\tutu.jpg" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="sons\MusiqueFond.mp3">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
