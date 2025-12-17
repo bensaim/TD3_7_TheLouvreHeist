@@ -30,7 +30,7 @@ namespace LouvreHeist
         }
 
 
-        private void butValiderTenue_Click(object sender, RoutedEventArgs e)
+        private void butValiderTenue_Click(object sender, RoutedEventArgs e) //Après la selection de la tenue, renvoie à la première cinématique.
         {
             _mainWindow.AfficheUCCinematique();
         }

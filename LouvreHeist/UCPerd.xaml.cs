@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace LouvreHeist
 {
-    /// <summary>
-    /// Logique d'interaction pour UCPerd.xaml
-    /// </summary>
     public partial class UCPerd : UserControl
     {
         private MainWindow _mainWindow;

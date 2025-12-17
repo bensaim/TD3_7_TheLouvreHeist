@@ -22,14 +22,16 @@ namespace LouvreHeist
         public static string[,] REPONSES = { { "Sortie", "Louvre", "chmod u+x camera.camera", "Chaton999" }, { "Marie-Amelie", "Marie-Antoinette", "Marie-Louise", "Benoit" }, { "Vampire", "Fairy", "Cookie", "Diamond" }, { "Gonandarf", "Médecin Oeuf-Homme", "Light Vador", "Thonas" }, { "1001", "999", "1000", "1002" }, { "1", "2", "3", "4" } };
         public static string[] BOUTONS = ["Je l'ai.", "Hum...", "Shine bright like a...", "Boss Fight", "En garde crâne d'oeuf !", "YAAAAAAAAAAA", "S'échapper"];
         public static int[,] BONNEREP = { { 2 }, { 3 }, { 4 }, { 2 }, { 1 }, { 2 } };
-
-        public static int indiceOeuf = 1;
-        public static int indiceFond = 1;
-        public static int indiceDialogue = 0;
+        public static int indiceDialogue= 0;
         public static int indiceBoutons = 0;
         public static int indiceQuestions = 0;
         public static int indiceReponses = 0;
         public static int Cinematique = 1;
+        public static int indiceOeuf = 1;
+        public static int indiceFond = 1;
+
+        private static MediaPlayer musique;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -79,6 +81,13 @@ namespace LouvreHeist
             UCGagner uc = new UCGagner(this);
             ZoneJeu.Content = uc;
         }
-
+        private void InitMusique()
+        {
+            musique = new MediaPlayer();
+            musique.Open(new Uri(AppDomain.CurrentDomain.BaseDirectory + "sons/musiqueFond.mp3"));
+            musique.MediaEnded += RelanceMusique;
+            musique.Volume = 0.5;
+            musique.Play();
+        }
     }
 }

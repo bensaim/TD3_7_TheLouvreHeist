@@ -94,23 +94,6 @@ namespace LouvreHeist
 
 
 
-        private void UserControl_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            butSuite.Visibility = Visibility.Visible;
-            labDialoguePresentation.Content = MainWindow.DIALOGUE[indiceD + 1 ];
-            if (indiceD + 1 == 10 || indiceD + 1 == 12)
-            {
-                labNom.Content = "Medecin Oeuf-Homme";
-                imgJustinDialogue.Source = new BitmapImage(new Uri(mechant));
-
-            }
-            else if (indiceD + 1 == 8 || indiceD + 1 == 14)
-            {
-                labNom.Content = "Justin";
-                imgJustinDialogue.Source = new BitmapImage(new Uri(nomFichierImage));
-
-            }
-           }
 
         private void butSuite_Click(object sender, RoutedEventArgs e)
         {
@@ -123,6 +106,23 @@ namespace LouvreHeist
                 _mainWindow.AfficheUCQuestion();
 
         }
-        
+
+        private void UserControlDialogue_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            butSuite.Visibility = Visibility.Visible;
+            labDialoguePresentation.Content = MainWindow.DIALOGUE[indiceD + 1];
+            if (indiceD + 1 == 10 || indiceD + 1 == 12)
+            {
+                labNom.Content = "Medecin Oeuf-Homme";
+                imgJustinDialogue.Source = new BitmapImage(new Uri(mechant));
+
+            }
+            else if (indiceD + 1 == 8 || indiceD + 1 == 14)
+            {
+                labNom.Content = "Justin";
+                imgJustinDialogue.Source = new BitmapImage(new Uri(nomFichierImage));
+
+            }
+        }
     }
 }

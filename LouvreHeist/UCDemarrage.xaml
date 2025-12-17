@@ -9,7 +9,7 @@
     <Grid>
         <Image x:Name="titreJeu" Margin="30,39,10,182" Source="/images/TheLouvreHeist.png" Stretch="Fill"/>
         <Button x:Name="butStart"  Click="butStart_Click" Margin="0,200,0,0" Width="340" Height="86">
-            <Image Height="86" Source="/images/start menu.png" Stretch="Fill" Width="340"/>
+            <Image x:Name="imgStart" Height="86" Source="/images/start menu.png" Stretch="Fill" Width="340"/>
         </Button>
         
         <Label x:Name="desc" Content="Sauras-tu voler les bijoux de la couronne?"  Foreground="White" FontFamily="Comic Sans MS" Height="86" Width="326" HorizontalAlignment="Center"  FontWeight="Bold" BorderThickness="10,10,10,10" FontSize="14" Margin="0,0,0,0" VerticalAlignment="Center"/>
