@@ -21,8 +21,8 @@
         <RadioButton x:Name="tenue4" Margin= "0, 294, 100, 0" Click="tenue4_Click" Width="170" Height="150" HorizontalAlignment="Right"> 
             <Image Source="/images/panneau.png" Stretch="Fill" Width="150" Height="150"/>
         </RadioButton>
-        
-        <Button x:Name="butValiderTenue" Content="VALIDER" Width="100" Height="100" Click="butValiderTenue_Click" IsEnabled="False" Margin="0,40,0,0"/>
+
+        <Button x:Name="butValiderTenue" Content="VALIDER" Width="100" Height="100" Click="butValiderTenue_Click" IsEnabled="False" Margin="0,40,0,0" Background="White"/>
 
         <Viewbox Stretch="Uniform">
             <Rectangle x:Name="rectangleDialogue1" HorizontalAlignment="Center" Height="75" Stroke="White" VerticalAlignment="Top" Width="740" Fill="White" RenderTransformOrigin="0.5,0.5" RadiusX="23.601" RadiusY="23.601" Margin="0,0,0,350" >

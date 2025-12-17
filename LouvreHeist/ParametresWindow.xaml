@@ -8,7 +8,7 @@
         Title="ParametresWindow" Height="450" Width="800">
     <Grid>
         <Slider x:Name="slidVitesse" Minimum="1" Maximum="3" Value="2" TickFrequency="1" IsSnapToTickEnabled="True" TickPlacement="BottomRight" AutoToolTipPlacement="BottomRight" Margin="280,73,280,298" />
-        <Button x:Name="butOk" Content="OK" HorizontalAlignment="Left" Margin="280,315,0,0" VerticalAlignment="Top" Click="butOk_Click"/>
-        <Button x:Name="butAnnuler" Content="Annuler" HorizontalAlignment="Left" Margin="475,315,0,0" VerticalAlignment="Top" Click="butAnnuler_Click"/>
+        <Button x:Name="butOk" Content="OK" HorizontalAlignment="Left" Margin="280,315,0,0" VerticalAlignment="Top" Click="butOk_Click" Background="White"/>
+        <Button x:Name="butAnnuler" Content="Annuler" HorizontalAlignment="Left" Margin="475,315,0,0" VerticalAlignment="Top" Click="butAnnuler_Click" Background="White"/>
     </Grid>
 </Window>

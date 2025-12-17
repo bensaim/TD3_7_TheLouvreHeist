@@ -36,14 +36,17 @@ namespace LouvreHeist
             switch (MainWindow.indiceDialogue)
             {
                 case 1:
+                    labNom.Content = "Justin";
                     MainWindow.indiceFond++;
                     imgFond.Source = new BitmapImage(new Uri(fond));
                     break;
                 case 3:
+                    labNom.Content = "Justin";
                     MainWindow.indiceFond++;
                     imgFond.Source = new BitmapImage(new Uri(fond));
                     break;
                 case 5:
+                    labNom.Content = "Justin";
                     MainWindow.indiceFond++;
                     imgFond.Source = new BitmapImage(new Uri(fond));
                     break;

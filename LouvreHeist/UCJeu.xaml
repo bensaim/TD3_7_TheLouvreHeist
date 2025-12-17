@@ -9,27 +9,25 @@
     <Canvas x:Name="canvasJeu" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MouseLeftButtonDown="canvasJeu_MouseLeftButtonDown"
         >
 
-        <!-- Fond 1 -->
+  
         <Image x:Name="imgFond1" Source="/images/courseLouvre.png"
            Stretch="Fill"
            Width="{Binding ActualWidth, ElementName=canvasJeu}"
            Height="341"
            Canvas.Left="0" Canvas.Top="0"/>
 
-        <!-- Fond 2 (pour enchaînement) -->
         <Image x:Name="imgFond2" Source="/images/courseLouvre.png"
            Stretch="Fill"
            
            Canvas.Left="{Binding ActualWidth, ElementName=canvasJeu}" Canvas.Top="0" Height="336" Width="800"/>
 
-        <!-- Sol 1 -->
         <Image x:Name="imgSol1" Source="/images/bordureTrottoir.png"
            Stretch="Fill"
            
            Canvas.Top="341"
            Canvas.Left="0" Height="109" Width="800"/>
 
-        <!-- Sol 2 -->
+
         <Image x:Name="imgSol2" Source="/images/bordureTrottoir.png"
            Stretch="Fill"
            Width="{Binding ActualWidth, ElementName=canvasJeu}"
@@ -37,20 +35,17 @@
            Canvas.Top="341"
            Canvas.Left="{Binding ActualWidth, ElementName=canvasJeu}"/>
 
-        <!-- Policier -->
         <Image x:Name="imgPolicier" Source="/images/policier.png"
            Stretch="Fill"
            Width="201" Height="298"
            Canvas.Left="495" Canvas.Top="149"/>
 
-        <!-- Justin -->
         <Image x:Name="imgJustinJeu" Source="/images/JustinJeu1.png"
            Stretch="Fill"
            Width="200" Height="215"
-           Canvas.Left="86" Canvas.Top="225" HorizontalAlignment="Center" VerticalAlignment="Top"
-           />
+           Canvas.Left="86" Canvas.Top="225" HorizontalAlignment="Center" VerticalAlignment="Top"/>
         <Label x:Name="timer" Content="10" Canvas.Left="360" Canvas.Top="49" Height="90" Width="74" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="48" Foreground="Red" FontWeight="Bold"/>
-        <Button x:Name="butFin" Content="S'ECHAPPER" Canvas.Left="350" Canvas.Top="144" Height="44" Width="100" Visibility="Hidden" Click="butFin_Click"/>
+        <Button x:Name="butFin" Content="S'ECHAPPER" Canvas.Left="350" Canvas.Top="144" Height="44" Width="100" Visibility="Hidden" Click="butFin_Click" Background="White"/>
         <Label x:Name="labFeliz" Content="FELICITATION TU T'ES ECHAPPE" Canvas.Left="131" Canvas.Top="225" Foreground="Red" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center" FontWeight="Bold" FontFamily="Comic Sans MS" Width="538" Visibility="Hidden"/>
     </Canvas>
 
