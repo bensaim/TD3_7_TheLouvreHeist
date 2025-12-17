@@ -22,14 +22,16 @@ namespace LouvreHeist
     public partial class UCDialogue : UserControl
     {
         private MainWindow _mainWindow;
+        private string mechant;
+        private string nomFichierImage;
         int indiceD = MainWindow.indiceDialogue;
         public UCDialogue(MainWindow mainWindow)
         {
             
             InitializeComponent();
-            string nomFichierImage = $"pack://application:,,,/images/JustinDialogue{MainWindow.Perso}.png";
+            nomFichierImage = $"pack://application:,,,/images/JustinDialogue{MainWindow.Perso}.png";
             imgJustinDialogue.Source = new BitmapImage(new Uri(nomFichierImage));
-            string mechant = $"pack://application:,,,/images/oeufHomme{MainWindow.indiceOeuf}.png";
+            mechant = $"pack://application:,,,/images/oeufHomme{MainWindow.indiceOeuf}.png";
             string fond = $"pack://application:,,,/images/fond{MainWindow.indiceFond}.png";
             switch (MainWindow.indiceDialogue)
             {
@@ -96,11 +98,13 @@ namespace LouvreHeist
             if (indiceD + 1 == 10 || indiceD + 1 == 12)
             {
                 labNom.Content = "Medecin Oeuf-Homme";
+                imgJustinDialogue.Source = new BitmapImage(new Uri(mechant));
 
             }
             else if (indiceD + 1 == 8 || indiceD + 1 == 14)
             {
                 labNom.Content = "Justin";
+                imgJustinDialogue.Source = new BitmapImage(new Uri(nomFichierImage));
 
             }
            }
