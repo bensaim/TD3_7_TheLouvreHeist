@@ -97,6 +97,17 @@ namespace LouvreHeist
             musique.Position = TimeSpan.Zero;
             musique.Play();
         }
+        public void Rejouer()
+        {
+            indiceDialogue = 0;
+            indiceBoutons = 0;
+            indiceQuestions = 0;
+            indiceReponses = 0;
+            Cinematique = 1;
+            indiceOeuf = 1;
+            indiceFond = 1;
+            AfficheUCTenue();
+        }
 
     }
 }

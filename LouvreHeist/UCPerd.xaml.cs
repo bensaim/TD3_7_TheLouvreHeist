@@ -26,14 +26,7 @@ namespace LouvreHeist
 
         private void butRejouer_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow.indiceDialogue = 0;
-            MainWindow.indiceBoutons = 0;
-            MainWindow.indiceQuestions = 0;
-            MainWindow.indiceReponses = 0;
-            MainWindow.Cinematique = 1;
-            MainWindow.indiceOeuf = 1;
-            MainWindow.indiceFond = 1;
-            _mainWindow.AfficheUCTenue();
+            _mainWindow.Rejouer();
         }
 
         private void butQuitter_Click(object sender, RoutedEventArgs e)
