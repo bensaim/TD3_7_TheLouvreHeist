@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:LouvreHeist"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800" MinHeight="450" MinWidth="800">
     <Grid>
 
         <Viewbox Stretch="Uniform">
@@ -17,7 +17,7 @@
             </Rectangle>
         </Viewbox>
 
-        <Label x:Name="labQuestion"  VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,50,0,0"  FontFamily="Impact" FontSize="20"/>
+        <Label x:Name="labQuestion"  VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,50,0,0"  FontFamily="Impact" FontSize="16"/>
         <Button x:Name="butRep1" Content="" Tag="1" Click="butRep_Click"  Margin="145,130,485,270" Width="150" Height="50" Background="White"/>
         <Button x:Name="butRep2" Content="" Tag="2" Click="butRep_Click"  Margin="485,130,145,270" Width="150" Height="50" Background="White"/>
         <Button x:Name="butRep3" Content="" Tag="3" Click="butRep_Click"  Margin="145,300,485,90"  Width="150" Height="50" Background="White"/>

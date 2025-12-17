@@ -11,15 +11,15 @@
         <Image x:Name="imgFond" Margin="0,0,0,0" Source="/images/fond1.png" Stretch="Fill"/>
         
         <Viewbox Stretch="Uniform">
-            <Rectangle x:Name="rectangleDialogue1" Height="75" Stroke="White" Width="740" Fill="White"  RadiusX="23.601" RadiusY="23.601" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,330,0,0" >
+            <Rectangle x:Name="rectangleDialogue1" Height="75" Stroke="White" Width="740" Fill="White"  RadiusX="23.601" RadiusY="23.601" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,360,0,0" >
                 <Rectangle.Effect>
                     <DropShadowEffect/>
                 </Rectangle.Effect>
             </Rectangle>
         </Viewbox>
         
-        <Label x:Name="labDialoguePresentation" Margin="0,0,0,30" FontSize="20" FontFamily="Impact" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
-        <Label x:Name="labNom" Content="" Margin="40,0,0,50" FontSize="14" FontWeight="Bold" Height="36" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200"/>
+        <Label x:Name="labDialoguePresentation" Margin="0,0,0,60" FontSize="20" FontFamily="Impact" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+        <Label x:Name="labNom" Content="" Margin="40,0,0,70" FontSize="14" FontWeight="Bold" Height="36" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200"/>
         <Button x:Name="butSuite"  HorizontalAlignment="Right" Margin="0,0,102,110" VerticalAlignment="Bottom" Click="butSuite_Click" Background="White" Width="150"/>
         <Image x:Name="imgJustinDialogue" Margin="259,84,259,110" Source="/images/JustinDialogue1.png" Stretch="Fill" Height="256" Width="282" MinHeight="100" MinWidth="100"/>
 
