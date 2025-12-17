@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Media;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -30,12 +31,14 @@ namespace LouvreHeist
         public static int indiceOeuf = 1;
         public static int indiceFond = 1;
 
-        private static MediaPlayer musique;
+        public static MediaPlayer musique;
+
 
         public MainWindow()
         {
             InitializeComponent();
             InitMusique();
+            InitSon();
             WindowState = WindowState.Maximized;
             UCDemarrage uc = new UCDemarrage(this);
             ZoneJeu.Content = uc;
@@ -95,5 +98,6 @@ namespace LouvreHeist
             musique.Position = TimeSpan.Zero;
             musique.Play();
         }
+
     }
 }

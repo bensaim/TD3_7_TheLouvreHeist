@@ -45,7 +45,6 @@ namespace LouvreHeist
         {
             if (sender is not Button button)
                 return;
-
             int reponseChoisie = int.Parse(button.Tag.ToString()); //l'id du bouton est stocké dans une variable.
             TraiterReponse(reponseChoisie); //compare la réponse avec la bonne réponse stockée dans BONNEREP.
         }
