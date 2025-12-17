@@ -16,7 +16,7 @@
             </Rectangle>
         </Viewbox>
         <Label x:Name="labDialoguePresentation" Margin="0,0,0,30" FontSize="20" FontFamily="Impact" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
-        <Label x:Name="labNom" Content="" Margin="40,0,0,50" FontSize="14" FontWeight="Bold" Height="36" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="53"/>
+        <Label x:Name="labNom" Content="" Margin="40,0,0,50" FontSize="14" FontWeight="Bold" Height="36" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="200"/>
         <Button x:Name="butSuite"  HorizontalAlignment="Right" Margin="0,0,102,110" VerticalAlignment="Bottom" Click="butSuite_Click" />
         <Image x:Name="imgJustinDialogue" Margin="259,84,259,110" Source="/images/JustinDialogue1.png" Stretch="Fill" Height="256" Width="282" MinHeight="100" MinWidth="100"/>
 

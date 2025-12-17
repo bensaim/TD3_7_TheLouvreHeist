@@ -28,26 +28,30 @@ namespace LouvreHeist
             InitializeComponent();
             string nomFichierImage = $"pack://application:,,,/images/JustinDialogue{MainWindow.Perso}.png";
             imgJustinDialogue.Source = new BitmapImage(new Uri(nomFichierImage));
+
+            switch (MainWindow.indiceDialogue)
+            {
+                case 7:
+                    labNom.Content = "???";
+                    break;
+                case 9:
+                    labNom.Content = "Medecin Oeuf-Homme";
+                    break;
+                case 11:
+                    labNom.Content = "Medecin Oeuf-Homme";
+                    break;
+                default:
+                    labNom.Content = "Justin";
+                    break;
+            }
             labDialoguePresentation.Content = MainWindow.DIALOGUE[MainWindow.indiceDialogue ];
             _mainWindow = mainWindow;
             butSuite.Content = MainWindow.BOUTONS[MainWindow.indiceBoutons];
             MainWindow.indiceBoutons++;
             butSuite.Visibility = Visibility.Hidden;
             MainWindow.indiceDialogue = MainWindow.indiceDialogue + 2;
-            switch (MainWindow.indiceDialogue)
-            {
-                case 9:
-                    labNom.Content="???";
-                    break;
 
-                case 8:
-                    labNom.Content = "Medecin Oeuf-Homme";
-                    break;
 
-                default:
-                    labNom.Content = "Justin";
-                    break;
-            }
         }
 
 
@@ -57,7 +61,15 @@ namespace LouvreHeist
         {
             butSuite.Visibility = Visibility.Visible;
             labDialoguePresentation.Content = MainWindow.DIALOGUE[indiceD + 1 ];
-        }
+            if (indiceD + 1 == 10 || indiceD + 1 == 12)
+            {
+                labNom.Content = "Medecin Oeuf-Homme";
+            }
+            else if (indiceD + 1 == 8)
+            {
+                labNom.Content = "Justin";
+            }
+           }
 
         private void butSuite_Click(object sender, RoutedEventArgs e)
         {
