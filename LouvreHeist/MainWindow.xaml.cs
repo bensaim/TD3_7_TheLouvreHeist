@@ -38,7 +38,6 @@ namespace LouvreHeist
         {
             InitializeComponent();
             InitMusique();
-            InitSon();
             WindowState = WindowState.Maximized;
             UCDemarrage uc = new UCDemarrage(this);
             ZoneJeu.Content = uc;
