@@ -7,18 +7,18 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <RadioButton x:Name="tenue1" Margin="100, 0, 0, 50" Click="tenue1_Click" Width="170" Height="150" HorizontalAlignment="Left"> 
+        <RadioButton x:Name="tenue1" Margin="100, 0, 0, 50" Width="170" Height="150" HorizontalAlignment="Left" Tag="1" Click="Tenue_Clicked"> 
             <Image Height="150" Source="/images/tutu.jpg"  Width="170" />
         </RadioButton>
-        <RadioButton x:Name="tenue2" Margin = "0, 0, 100, 50" Click="tenue2_Click" Width="170" Height="150" HorizontalAlignment="Right">
+        <RadioButton x:Name="tenue2" Margin = "0, 0, 100, 50" Width="170" Height="150" HorizontalAlignment="Right" Tag="2" Click="Tenue_Clicked">
             <Image Height="150" Source="/images/tenueworker.jpg" Width="170"/>
         </RadioButton>
 
-        <RadioButton x:Name="tenue3" Margin =" 100, 294, 50, 0" Click="tenue3_Click" Width="170" Height="150" HorizontalAlignment="Left"> 
+        <RadioButton x:Name="tenue3" Margin =" 100, 294, 50, 0" Width="170" Height="150" HorizontalAlignment="Left" Tag="3" Click="Tenue_Clicked"> 
             <Image Height="150" Source="/images/emo.png" Stretch="Fill" Width="170"/>
         </RadioButton>
 
-        <RadioButton x:Name="tenue4" Margin= "0, 294, 100, 0" Click="tenue4_Click" Width="170" Height="150" HorizontalAlignment="Right"> 
+        <RadioButton x:Name="tenue4" Margin= "0, 294, 100, 0" Width="170" Height="150" HorizontalAlignment="Right" Tag="4" Click="Tenue_Clicked"> 
             <Image Source="/images/panneau.png" Stretch="Fill" Width="150" Height="150"/>
         </RadioButton>
 

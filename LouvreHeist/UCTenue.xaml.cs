@@ -35,28 +35,11 @@ namespace LouvreHeist
             _mainWindow.AfficheUCCinematique();
         }
 
-        private void tenue1_Click(object sender, RoutedEventArgs e)
-        {
-            butValiderTenue.IsEnabled = true;
-            MainWindow.Perso = "1";
-        }
 
-        private void tenue2_Click(object sender, RoutedEventArgs e)
+        private void Tenue_Clicked(object sender, RoutedEventArgs e)
         {
             butValiderTenue.IsEnabled = true;
-            MainWindow.Perso = "2";
-        }
-
-        private void tenue3_Click(object sender, RoutedEventArgs e)
-        {
-            butValiderTenue.IsEnabled = true;
-            MainWindow.Perso = "3";
-        }
-
-        private void tenue4_Click(object sender, RoutedEventArgs e)
-        {
-            butValiderTenue.IsEnabled = true;
-            MainWindow.Perso = "4";
+            MainWindow.Perso = (sender as RadioButton)?.Tag.ToString();
         }
     }
 }
